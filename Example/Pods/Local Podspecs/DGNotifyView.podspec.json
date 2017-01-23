@@ -1,0 +1,22 @@
+{
+  "name": "DGNotifyView",
+  "version": "0.1.0",
+  "summary": "A short description of DGNotifyView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/DGNotifyView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "glowcap": "doku005@yahoo.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/DGNotifyView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "DGNotifyView/Classes/**/*"
+}

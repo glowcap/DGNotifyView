@@ -1,0 +1,16 @@
+PODS:
+  - DGNotifyView (0.1.0)
+
+DEPENDENCIES:
+  - DGNotifyView (from `../`)
+
+EXTERNAL SOURCES:
+  DGNotifyView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DGNotifyView: b470006a07163ae85c960079991283aa3b76790b
+
+PODFILE CHECKSUM: 108fd1daef54d43460b65ba5fef6fbb26a32a773
+
+COCOAPODS: 1.0.0
