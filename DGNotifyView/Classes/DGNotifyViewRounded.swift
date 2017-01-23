@@ -10,11 +10,12 @@ import Foundation
 import UIKit
 
 
-public class DGNotifyView: DGNotificationView {
+public class DGNotifyViewRounded: DGNotificationView {
     
     
-    public init(fromSide: Side, fullWidth: Bool, title: String, message: String) {
-        super.init(fullWidth: fullWidth, side: fromSide, cornerRadius: 0.0, image: nil, title: title, message: message)
+    public init(fromSide: Side, fullWidth: Bool, cornerRadius: CGFloat, title: String, message: String) {
+        super.init(fullWidth: fullWidth, side: fromSide, cornerRadius: cornerRadius,
+                   image: nil, title: title, message: message)
         configure()
     }
     

@@ -10,7 +10,11 @@
 		349BF30A3A2FACC05813546A3D7CA28E /* DGNotifyView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C66662BF6D077E41BF27ACBB4CF495B4 /* DGNotifyView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E475D7D371F04E1371B7D08BBB731EC /* Pods-DGNotifyView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58224B0E0BFDA1B3F1BE50F64668F3B2 /* Pods-DGNotifyView_Tests-dummy.m */; };
 		7060B3037275BBED2562B875FC17CE55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		839F310D1E3585B500AF24F4 /* DGNotifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F310C1E3585B500AF24F4 /* DGNotifyView.swift */; };
+		839F310D1E3585B500AF24F4 /* DGNotifyViewRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F310C1E3585B500AF24F4 /* DGNotifyViewRounded.swift */; };
+		839F310F1E35938A00AF24F4 /* DGNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F310E1E35938A00AF24F4 /* DGNotificationView.swift */; };
+		839F31111E360FE100AF24F4 /* DGNotifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F31101E360FE100AF24F4 /* DGNotifyView.swift */; };
+		839F31151E3634C600AF24F4 /* DGNotifyViewRoundedWithImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F31141E3634C600AF24F4 /* DGNotifyViewRoundedWithImg.swift */; };
+		839F31171E3639E600AF24F4 /* DGNotifyViewWithImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F31161E3639E600AF24F4 /* DGNotifyViewWithImg.swift */; };
 		96CAF1C681DBCD67C896AD3DFE0632FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		B30D535B0785E8A91B18E664E6A6AF50 /* Pods-DGNotifyView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7DCC0DD0AC89D148B559BF60C54519 /* Pods-DGNotifyView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5E7A4D9C9342816B11CD4BA4F0D9651 /* Pods-DGNotifyView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DF802A65D0473208ECCEDD5073FAAA /* Pods-DGNotifyView_Example-dummy.m */; };
@@ -48,7 +52,11 @@
 		7683092E8624B7081C95670419FAA0CB /* Pods-DGNotifyView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DGNotifyView_Tests-resources.sh"; sourceTree = "<group>"; };
 		7E512CD5C293154EE6FB7A886E485A34 /* DGNotifyView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DGNotifyView.modulemap; sourceTree = "<group>"; };
 		8256E02756963633704B9F33A40BDDB5 /* DGNotifyView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DGNotifyView.xcconfig; sourceTree = "<group>"; };
-		839F310C1E3585B500AF24F4 /* DGNotifyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyView.swift; sourceTree = "<group>"; };
+		839F310C1E3585B500AF24F4 /* DGNotifyViewRounded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyViewRounded.swift; sourceTree = "<group>"; };
+		839F310E1E35938A00AF24F4 /* DGNotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotificationView.swift; sourceTree = "<group>"; };
+		839F31101E360FE100AF24F4 /* DGNotifyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyView.swift; sourceTree = "<group>"; };
+		839F31141E3634C600AF24F4 /* DGNotifyViewRoundedWithImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyViewRoundedWithImg.swift; sourceTree = "<group>"; };
+		839F31161E3639E600AF24F4 /* DGNotifyViewWithImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyViewWithImg.swift; sourceTree = "<group>"; };
 		922916D5161A7B537D358C3D70C47A57 /* Pods-DGNotifyView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DGNotifyView_Example-resources.sh"; sourceTree = "<group>"; };
 		9385D17822C19110F7D5B7EA5C710C93 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -193,7 +201,11 @@
 		B6F8DFE04B55CA252CB6DCCB1F528AED /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				839F310C1E3585B500AF24F4 /* DGNotifyView.swift */,
+				839F310E1E35938A00AF24F4 /* DGNotificationView.swift */,
+				839F310C1E3585B500AF24F4 /* DGNotifyViewRounded.swift */,
+				839F31141E3634C600AF24F4 /* DGNotifyViewRoundedWithImg.swift */,
+				839F31101E360FE100AF24F4 /* DGNotifyView.swift */,
+				839F31161E3639E600AF24F4 /* DGNotifyViewWithImg.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -364,8 +376,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				839F31111E360FE100AF24F4 /* DGNotifyView.swift in Sources */,
+				839F310F1E35938A00AF24F4 /* DGNotificationView.swift in Sources */,
 				F02236C16124543C2ED299158E394DFE /* DGNotifyView-dummy.m in Sources */,
-				839F310D1E3585B500AF24F4 /* DGNotifyView.swift in Sources */,
+				839F310D1E3585B500AF24F4 /* DGNotifyViewRounded.swift in Sources */,
+				839F31151E3634C600AF24F4 /* DGNotifyViewRoundedWithImg.swift in Sources */,
+				839F31171E3639E600AF24F4 /* DGNotifyViewWithImg.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
