@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Animated view for internal app notifications
+Animated view for internal app notifications. With this you can quickly generate a UIView to notify the user internally. You can also add an image to the notification and set the time before the view leaves the screen.
                        DESC
 
   s.homepage         = 'https://github.com/glowcap/DGNotifyView'
