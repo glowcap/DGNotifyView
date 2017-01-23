@@ -10,8 +10,8 @@
 		349BF30A3A2FACC05813546A3D7CA28E /* DGNotifyView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C66662BF6D077E41BF27ACBB4CF495B4 /* DGNotifyView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E475D7D371F04E1371B7D08BBB731EC /* Pods-DGNotifyView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58224B0E0BFDA1B3F1BE50F64668F3B2 /* Pods-DGNotifyView_Tests-dummy.m */; };
 		7060B3037275BBED2562B875FC17CE55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		839F310D1E3585B500AF24F4 /* DGNotifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F310C1E3585B500AF24F4 /* DGNotifyView.swift */; };
 		96CAF1C681DBCD67C896AD3DFE0632FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		9F9EEFFBB7637BA880386E5B4E727507 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D76451FE23741E302152EC11BD58D6 /* ReplaceMe.swift */; };
 		B30D535B0785E8A91B18E664E6A6AF50 /* Pods-DGNotifyView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7DCC0DD0AC89D148B559BF60C54519 /* Pods-DGNotifyView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5E7A4D9C9342816B11CD4BA4F0D9651 /* Pods-DGNotifyView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DF802A65D0473208ECCEDD5073FAAA /* Pods-DGNotifyView_Example-dummy.m */; };
 		D6F325F972097F4CF47872F7B44239B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
@@ -41,7 +41,6 @@
 		511C8BF0F6F11928885E664B483602D3 /* Pods-DGNotifyView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DGNotifyView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		58224B0E0BFDA1B3F1BE50F64668F3B2 /* Pods-DGNotifyView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DGNotifyView_Tests-dummy.m"; sourceTree = "<group>"; };
 		59577B319FD90FCA3145CF06B4B434ED /* Pods_DGNotifyView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DGNotifyView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		59D76451FE23741E302152EC11BD58D6 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		5E7DCC0DD0AC89D148B559BF60C54519 /* Pods-DGNotifyView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DGNotifyView_Example-umbrella.h"; sourceTree = "<group>"; };
 		6A03ADAD69A818FB4719CB210A230B1F /* Pods_DGNotifyView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DGNotifyView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC48173E499F1C02FBB764F9A9F0820 /* DGNotifyView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGNotifyView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +48,7 @@
 		7683092E8624B7081C95670419FAA0CB /* Pods-DGNotifyView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DGNotifyView_Tests-resources.sh"; sourceTree = "<group>"; };
 		7E512CD5C293154EE6FB7A886E485A34 /* DGNotifyView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DGNotifyView.modulemap; sourceTree = "<group>"; };
 		8256E02756963633704B9F33A40BDDB5 /* DGNotifyView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DGNotifyView.xcconfig; sourceTree = "<group>"; };
+		839F310C1E3585B500AF24F4 /* DGNotifyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyView.swift; sourceTree = "<group>"; };
 		922916D5161A7B537D358C3D70C47A57 /* Pods-DGNotifyView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DGNotifyView_Example-resources.sh"; sourceTree = "<group>"; };
 		9385D17822C19110F7D5B7EA5C710C93 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -193,7 +193,7 @@
 		B6F8DFE04B55CA252CB6DCCB1F528AED /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				59D76451FE23741E302152EC11BD58D6 /* ReplaceMe.swift */,
+				839F310C1E3585B500AF24F4 /* DGNotifyView.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -362,7 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F02236C16124543C2ED299158E394DFE /* DGNotifyView-dummy.m in Sources */,
-				9F9EEFFBB7637BA880386E5B4E727507 /* ReplaceMe.swift in Sources */,
+				839F310D1E3585B500AF24F4 /* DGNotifyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
