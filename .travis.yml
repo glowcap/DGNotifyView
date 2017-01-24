@@ -7,8 +7,12 @@ before_install:
  - gem install cocoapods -v 1.1.1
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild -verbose -workspace Example/DGNotifyView.xcworkspace -scheme DGNotifyView-Example -sdk iphonesimulator10.2 -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.2' build test | xcpretty -c
+#- set -o pipefail && xcodebuild -verbose -workspace Example/DGNotifyView.xcworkspace -scheme DGNotifyView-Example -sdk iphonesimulator10.2 -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.2' build test | xcpretty -c
+- set -o pipefail && xcodebuild -verbose -workspace Example/DGNotifyView.xcworkspace -scheme DGNotifyView-Example -sdk iphonesimulator10.2 -destination 'id:BE8E0914-5B5F-45C2-8C99-879894AF72B0' clean build test | xcpretty -c
+
 - sleep 10
-- set -o pipefail && xcodebuild -verbose -workspace Example/DGNotifyView.xcworkspace -scheme DGNotifyView-Example -sdk iphonesimulator10.2 -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.2' test | xcpretty -tc
+#- set -o pipefail && xcodebuild -verbose -workspace Example/DGNotifyView.xcworkspace -scheme DGNotifyView-Example -sdk iphonesimulator10.2 -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.2' test | xcpretty -tc
+- set -o pipefail && xcodebuild -verbose -workspace Example/DGNotifyView.xcworkspace -scheme DGNotifyView-Example -sdk iphonesimulator10.2 -destination 'id:BE8E0914-5B5F-45C2-8C99-879894AF72B0' test | xcpretty -tc
+
 #- set -o pipefail && xcodebuild test -workspace Example/DGNotifyView.xcworkspace -scheme DGNotifyView-Example -sdk iphonesimulator9 ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
