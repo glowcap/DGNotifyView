@@ -1,6 +1,7 @@
 # DGNotifyView
 
 [![CI Status](http://img.shields.io/travis/glowcap/DGNotifyView.svg?style=flat)](https://travis-ci.org/glowcap/DGNotifyView)
+[![Swift](https://img.shields.io/badge/%20compatible-swift%203.0-orange.svg)](http://swift.org)
 [![Version](https://img.shields.io/cocoapods/v/DGNotifyView.svg?style=flat)](http://cocoapods.org/pods/DGNotifyView)
 [![License](https://img.shields.io/cocoapods/l/DGNotifyView.svg?style=flat)](http://cocoapods.org/pods/DGNotifyView)
 [![Platform](https://img.shields.io/cocoapods/p/DGNotifyView.svg?style=flat)](http://cocoapods.org/pods/DGNotifyView)
