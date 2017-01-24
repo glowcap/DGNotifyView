@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// This is the base class and shouldn't need to be called in most situations
 public class DGNotificationView: UIView {
     
     public let dgScreenWidth = UIScreen.main.bounds.width
