@@ -1,9 +1,7 @@
 language: objective-c
 osx_image: xcode8.0
-#xcode_project: _Pods.xcodeproj # path to your xcodeproj folder
-#xcode_scheme: DGNotifyView
 # cache: cocoapods
-podfile: Example/Podfile
+# podfile: Example/Podfile
 before_install:
  - gem install cocoapods -v 1.1.1
 # - pod install --project-directory=Example
