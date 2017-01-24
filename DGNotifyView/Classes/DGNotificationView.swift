@@ -56,7 +56,7 @@ public class DGNotificationView: UIView {
         self.frame = setStartFrom(side: side, fullWidth: fullWidth)
         configureContents()
         addShadow()
-        backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
+        backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1)
 
     }
     
