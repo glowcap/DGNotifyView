@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DGNotifyView_Example' do
+  pod 'DGNotifyView', :path => '../'
+
+  target 'DGNotifyView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

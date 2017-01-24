@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/DMac/Documents/AppDevelopment/Cocoapods/DGNotifyView/Example/build/Debug-iphonesimulator/DGNotifyView/DGNotifyView.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "DGNotifyView-Swift.h",
+          'external-contents': "/Users/DMac/Documents/AppDevelopment/Cocoapods/DGNotifyView/Example/build/Debug-iphonesimulator/DGNotifyView/DGNotifyView.framework/Headers/DGNotifyView-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "DGNotifyView-umbrella.h",
+          'external-contents': "/Users/DMac/Documents/AppDevelopment/Cocoapods/DGNotifyView/Example/Pods/Target Support Files/DGNotifyView/DGNotifyView-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/DMac/Documents/AppDevelopment/Cocoapods/DGNotifyView/Example/build/Debug-iphonesimulator/DGNotifyView/DGNotifyView.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/DMac/Documents/AppDevelopment/Cocoapods/DGNotifyView/Example/build/Pods.build/Debug-iphonesimulator/DGNotifyView.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

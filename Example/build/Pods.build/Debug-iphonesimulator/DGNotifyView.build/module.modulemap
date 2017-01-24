@@ -1,0 +1,10 @@
+framework module DGNotifyView {
+  umbrella header "DGNotifyView-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module DGNotifyView.Swift {
+    header "DGNotifyView-Swift.h"
+}

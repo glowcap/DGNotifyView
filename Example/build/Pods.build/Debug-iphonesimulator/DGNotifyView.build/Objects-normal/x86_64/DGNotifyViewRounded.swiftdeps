@@ -1,0 +1,187 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "DGNotifyViewRounded"
+provides-nominal:
+- "C12DGNotifyView19DGNotifyViewRounded"
+provides-member:
+- ["C12DGNotifyView19DGNotifyViewRounded", ""]
+provides-dynamic-lookup:
+- "configure"
+depends-top-level:
+- "NSCoder"
+- "DGNotifyViewRounded"
+- "CGFloat"
+- "Bool"
+- "String"
+- !private "StringLiteralType"
+- "DGNotificationView"
+depends-member:
+- ["Ps9AnyObject", "configure"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", ""]
+- ["Sb", "deinit"]
+- ["PSo15CALayerDelegate", "configure"]
+- ["PSo15CALayerDelegate", "init"]
+- ["PSo15CALayerDelegate", ""]
+- ["V12CoreGraphics7CGFloat", "deinit"]
+- ["Ps7CVarArg", "configure"]
+- ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", ""]
+- ["Ps28CustomDebugStringConvertible", "configure"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps17CustomReflectable", "init"]
+- ["Ps23CustomStringConvertible", "configure"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", ""]
+- ["C12DGNotifyView18DGNotificationView", "Bool"]
+- ["C12DGNotifyView18DGNotificationView", "CGFloat"]
+- ["C12DGNotifyView18DGNotificationView", "NSCoder"]
+- ["C12DGNotifyView18DGNotificationView", "Side"]
+- ["C12DGNotifyView18DGNotificationView", "String"]
+- ["C12DGNotifyView18DGNotificationView", "configure"]
+- ["C12DGNotifyView18DGNotificationView", "deinit"]
+- ["C12DGNotifyView18DGNotificationView", "init"]
+- ["C12DGNotifyView18DGNotificationView", ""]
+- ["C12DGNotifyView19DGNotifyViewRounded", "Bool"]
+- ["C12DGNotifyView19DGNotifyViewRounded", "CGFloat"]
+- ["C12DGNotifyView19DGNotifyViewRounded", "NSCoder"]
+- ["C12DGNotifyView19DGNotifyViewRounded", "Side"]
+- ["C12DGNotifyView19DGNotifyViewRounded", "String"]
+- ["C12DGNotifyView19DGNotifyViewRounded", "configure"]
+- ["C12DGNotifyView19DGNotifyViewRounded", "deinit"]
+- ["C12DGNotifyView19DGNotifyViewRounded", "init"]
+- ["Ps9Equatable", "configure"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", ""]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["Ps8Hashable", "configure"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", ""]
+- ["CSo7NSCoder", "deinit"]
+- ["PSo8NSCoding", "configure"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", ""]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "CGFloat"]
+- ["CSo8NSObject", "NSCoder"]
+- ["CSo8NSObject", "Side"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "configure"]
+- ["PSo16NSObjectProtocol", "configure"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", ""]
+- ["Os5Never", "deinit"]
+- ["Sq", "deinit"]
+- ["OC12DGNotifyView18DGNotificationView4Side", "deinit"]
+- ["Vs12StaticString", "deinit"]
+- !private ["Vs12StaticString", "init"]
+- ["SS", "deinit"]
+- ["PSo29UIAccessibilityIdentification", "configure"]
+- ["PSo29UIAccessibilityIdentification", "init"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- ["PSo12UIAppearance", "configure"]
+- ["PSo12UIAppearance", "init"]
+- ["PSo12UIAppearance", ""]
+- ["PSo21UIAppearanceContainer", "configure"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo17UICoordinateSpace", "configure"]
+- ["PSo17UICoordinateSpace", "init"]
+- ["PSo17UICoordinateSpace", ""]
+- ["PSo13UIDynamicItem", "configure"]
+- ["PSo13UIDynamicItem", "init"]
+- ["PSo13UIDynamicItem", ""]
+- ["PSo18UIFocusEnvironment", "configure"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["PSo11UIFocusItem", "configure"]
+- ["PSo11UIFocusItem", "init"]
+- ["PSo11UIFocusItem", ""]
+- ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "CGFloat"]
+- ["CSo11UIResponder", "NSCoder"]
+- ["CSo11UIResponder", "Side"]
+- ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "configure"]
+- ["PSo30UIResponderStandardEditActions", "configure"]
+- ["PSo30UIResponderStandardEditActions", "init"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- ["PSo18UITraitEnvironment", "configure"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo6UIView", "Bool"]
+- ["CSo6UIView", "CGFloat"]
+- ["CSo6UIView", "NSCoder"]
+- ["CSo6UIView", "Side"]
+- ["CSo6UIView", "String"]
+- ["CSo6UIView", "configure"]
+- ["Su", "deinit"]
+- ["Ps37_DefaultCustomPlaygroundQuickLookable", "configure"]
+- ["Ps37_DefaultCustomPlaygroundQuickLookable", "init"]
+- ["Ps37_DefaultCustomPlaygroundQuickLookable", ""]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- ["Ps9_Hashable", "configure"]
+- ["Ps9_Hashable", "init"]
+- ["Ps9_Hashable", ""]
+depends-nominal:
+- "Ps9AnyObject"
+- "Sb"
+- "PSo15CALayerDelegate"
+- "V12CoreGraphics7CGFloat"
+- "Ps7CVarArg"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "C12DGNotifyView18DGNotificationView"
+- "C12DGNotifyView19DGNotifyViewRounded"
+- "Ps9Equatable"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- "CSo7NSCoder"
+- "PSo8NSCoding"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "Os5Never"
+- "Sq"
+- "OC12DGNotifyView18DGNotificationView4Side"
+- "Vs12StaticString"
+- "SS"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "PSo11UIFocusItem"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- "Su"
+- "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps9_Hashable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/DMac/Documents/AppDevelopment/Cocoapods/DGNotifyView/Example/Pods/Target Support Files/DGNotifyView/DGNotifyView-umbrella.h"
+- "/Users/DMac/Documents/AppDevelopment/Cocoapods/DGNotifyView/Example/build/Pods.build/Debug-iphonesimulator/DGNotifyView.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "1d2053148ef9052559e7d6da8cd79a76"
