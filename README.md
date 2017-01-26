@@ -61,7 +61,7 @@ myNotif.set(txtColor: UIColor.red, bgColor: UIColor.darkGray)
 ```
 
 #### Animating
-Once you have an instance of DGNotifyView, you can call it to come in and also how long to display it. This function ends with a closure incase you want to do something when the animation is completed:
+Once you have an instance of DGNotifyView, you can call it to slide in with how long it should be displayed. This function ends with a closure in case you want to do something after the animation is completed:
 
 ```swift
 myNotif.displayFor(seconds: 1.0) { (finished) in
