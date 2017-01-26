@@ -14,7 +14,7 @@ DGNotifyView is a Swift-based API that allows quick in-app notification views. T
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
-You need to import UIKit...obviously. ;)
+You need to import `UIKit`...obviously. ;)
 
 ## Installation
 DGNotifyView is available through [CocoaPods](http://cocoapods.org). To install
@@ -35,7 +35,7 @@ DGNotifyView gives you four options for notifications:
 - DGNotifyViewRoundedWithImg: Yep. It’s a rounded notification view with image support.
 
 #### Initializing
-Since DGNotifyView is based on UIView, you’ll need to ‘import UIKit’ where you are initializing DGNotifyView. Then import DGNotifyView:
+Since DGNotifyView is based on UIView, you’ll need to `import UIKit` where you are initializing DGNotifyView. Then:
 
 ```swift
 import DGNotifyView
