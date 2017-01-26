@@ -29,11 +29,12 @@ If you prefer to install it manually, copy the files under the DGNotifyView subd
 ## Usage
 DGNotifyView gives you four options for notifications:
 
-DGNotifyView - This is the basic notification view with square edges
-DGNotifyViewWithImg - This allows you to add an image to the basic notification
-DGNotifyViewRounded - This is a basic notification view with rounded edges
-DGNotifyViewRoundedWithImg - Yep. It’s a rounded notification view with image support.
+- DGNotifyView: This is the basic notification view with square edges
+- DGNotifyViewWithImg: This allows you to add an image to the basic notification
+- DGNotifyViewRounded: This is a basic notification view with rounded edges
+- DGNotifyViewRoundedWithImg: Yep. It’s a rounded notification view with image support.
 
+#### Initializing
 Since DGNotifyView is based on UIView, you’ll need to ‘import UIKit’ where you are initializing DGNotifyView. Then import DGNotifyView:
 
 ```swift
@@ -50,6 +51,16 @@ Don’t forget to add it to your view when you’re ready to use it:
 ```swift
 self.view.addSubview(myNotif)
 ```
+
+#### Customizing
+You can change the defalut color of the text and background by calling `set(txtColor: UIColor?, bgColor: UIColor?)`
+(setting a parameter to `nil` leaves it the default color:
+
+```swift
+myNotif.set(txtColor: UIColor.red, bgColor: UIColor.darkGray)
+```
+
+#### Animating
 Once you have an instance of DGNotifyView, you can call it to come in and also how long to display it. This function ends with a closure incase you want to do something when the animation is completed:
 
 ```swift
@@ -62,8 +73,7 @@ myNotif.displayFor(seconds: 1.0) { (finished) in
 
 ## To-Do List
 There are a few things I’d like to add in the future:
-
-- [ ] Set custom colors for text and view background
+- [ ] ~~Add ability to set custom colors for text and background~~
 - [ ] Set custom font
 - [ ] Spring animation option
 
