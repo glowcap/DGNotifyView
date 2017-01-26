@@ -141,6 +141,7 @@ class ViewController: UIViewController {
         }
         
         self.view.addSubview(notifyView!)
+        notifyView.set(txtColor: UIColor.red, bgColor: UIColor.black)
         notifyView.displayFor(seconds: displaySeconds!) { (finished) in
             if finished {
                 self.nilNotifyView()

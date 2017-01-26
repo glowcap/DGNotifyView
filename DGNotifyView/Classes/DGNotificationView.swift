@@ -9,28 +9,19 @@
 import Foundation
 import UIKit
 
-// This is the base class and shouldn't need to be called in most situationsgi
+/// This is the base class for DGNotifyView and shouldn't need to be called in most situations
 public class DGNotificationView: UIView {
     
-    public let dgScreenWidth = UIScreen.main.bounds.width
-    public let dgScreenHeight = UIScreen.main.bounds.height
     
-    public var displayTime: Double!
-    public var title: String!
-    public var message: String!
-    public var side: Side!
-    public var cornerRadius: CGFloat!
-    
-    private var titleLabel: UILabel!
-    private var messageLabel: UILabel!
-    private var imageView: UIImageView!
-    private var image: UIImage!
-
-    private let vHeight:CGFloat = 68.0
-    private let shadowMargin:CGFloat = 4.0
-    private let topCarrierMargin:CGFloat = 20.0
-    private var xPadding: CGFloat!
-    
+    /// Determines where the view will appear from and go to.
+    /// Top and bottom values will go to the top or bottom, respectively
+    ///
+    /// - topLeft: Slides in from the top left side
+    /// - topRight: Slides in from the top right side
+    /// - bottomLeft: Slides in from the bottom left side
+    /// - bottomRight: Slides in from the bottom right side
+    /// - top: Slides down from the top
+    /// - bottom: Slides up from the bottom
     public enum Side: CGFloat {
         case topLeft
         case topRight
@@ -40,15 +31,97 @@ public class DGNotificationView: UIView {
         case bottom
     }
     
+    static let dgScreenWidth = UIScreen.main.bounds.width
+    static let dgScreenHeight = UIScreen.main.bounds.height
+    
+    private var _displayTime: Double!
+    private var _title: String!
+    private var _message: String!
+    private var _side: Side!
+    private var _cornerRadius: CGFloat!
+    private var _image: UIImage!
+    
+    
+    /// The number of seconds the notification should be displayed
+    public var displayTime: Double {
+        get {
+            return _displayTime
+        }
+    }
+    
+    
+    /// The title of the notification
+    public var title: String {
+        get {
+            return _title
+        }
+    }
+    
+    
+    /// The message of the notification
+    public var message: String {
+        get {
+            return _message
+        }
+    }
+
+    
+    /// The side which the notification will animate from
+    public var side: Side {
+        get {
+            return _side
+        }
+    }
+    
+    
+    /// The corner radius of the notification and image view
+    public var cornerRadius: CGFloat {
+        get {
+            return _cornerRadius
+        }
+    }
+    
+    
+    /// The image used in imageView
+    /// ** imageView's width and height are 64.0 **
+    public var image: UIImage {
+        get {
+            return _image
+        }
+    }
+    
+    private var titleLabel: UILabel!
+    private var messageLabel: UILabel!
+    private var imageView: UIImageView!
+
+    private let vHeight:CGFloat = 68.0
+    private let shadowMargin:CGFloat = 4.0
+    private let topCarrierMargin:CGFloat = 20.0
+    private var xPadding: CGFloat!
+    
+    private var textColor = UIColor.darkText {
+        didSet {
+            guard titleLabel != nil, messageLabel != nil else { return }
+            titleLabel.textColor = textColor
+            messageLabel.textColor = textColor
+        }
+    }
+    
+    private var bgColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1) {
+        didSet {
+            backgroundColor = bgColor
+        }
+    }
+    
     
     public init(fullWidth: Bool, side: Side, cornerRadius: CGFloat, image: UIImage?, title: String, message: String) {
-        self.side = side
-        self.title = title
-        self.message = message
-        self.cornerRadius = cornerRadius
+        _side = side
+        _title = title
+        _message = message
+        _cornerRadius = cornerRadius
         
         if let img = image {
-            self.image = img
+            _image = img
         }
         
         let frameZero = CGRect.zero
@@ -57,8 +130,7 @@ public class DGNotificationView: UIView {
         self.frame = setStartFrom(side: side, fullWidth: fullWidth)
         configureContents()
         addShadow()
-        backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1)
-
+        backgroundColor = bgColor
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -74,29 +146,45 @@ public class DGNotificationView: UIView {
         super.backgroundColor = UIColor.clear
     }
     
+    
+    /// Configures the contents of the notification. This cannot be accessed directly
     private func configureContents() {
         let topMargin:CGFloat = 2
         let imageWH: CGFloat = 64
         let leftLabelMarginWithImage:CGFloat = imageWH + 10
         let labelWidthWithImage:CGFloat = bounds.width - leftLabelMarginWithImage
         
-        if image != nil {
+        if _image != nil {
             imageView = UIImageView(frame: CGRect(x: 2, y: topMargin, width: imageWH, height: imageWH))
-            imageView.image = image!
+            imageView.image = image
             imageView.layer.cornerRadius = cornerRadius
+            imageView.contentMode = .scaleAspectFit
             imageView.clipsToBounds = true
             addSubview(imageView)
             
-            titleLabel = UILabel(frame: CGRect(x: leftLabelMarginWithImage, y: topMargin, width: labelWidthWithImage, height: 18))
-            messageLabel = UILabel(frame: CGRect(x: leftLabelMarginWithImage, y:  topMargin + titleLabel.bounds.height, width: labelWidthWithImage, height: 46))
+            titleLabel = UILabel(frame: CGRect(x: leftLabelMarginWithImage,
+                                               y: topMargin,
+                                               width: labelWidthWithImage,
+                                               height: 18))
+            messageLabel = UILabel(frame: CGRect(x: leftLabelMarginWithImage,
+                                                 y:  topMargin + titleLabel.bounds.height,
+                                                 width: labelWidthWithImage,
+                                                 height: 46))
         } else {
-            titleLabel = UILabel(frame: CGRect(x: 8, y: topMargin, width: self.bounds.width - 20, height: 18))
-            messageLabel = UILabel(frame: CGRect(x: 8, y:  topMargin + titleLabel.bounds.height, width: self.bounds.width - 20, height: 46))
+            titleLabel = UILabel(frame: CGRect(x: 8,
+                                               y: topMargin,
+                                               width: self.bounds.width - 20,
+                                               height: 18))
+            messageLabel = UILabel(frame: CGRect(x: 8,
+                                                 y:  topMargin + titleLabel.bounds.height,
+                                                 width: self.bounds.width - 20,
+                                                 height: 46))
         }
         
         titleLabel.textAlignment = .left
         titleLabel.adjustsFontSizeToFitWidth = true
         titleLabel.text = title
+        titleLabel.textColor = textColor
         titleLabel.font = UIFont(name: titleLabel.font.fontName, size: 16)
         addSubview(titleLabel)
         
@@ -104,35 +192,75 @@ public class DGNotificationView: UIView {
         messageLabel.numberOfLines = 3
         messageLabel.lineBreakMode = .byTruncatingTail
         messageLabel.text = message
+        messageLabel.textColor = textColor
         messageLabel.font = UIFont(name: messageLabel.font.fontName, size: 12)
         addSubview(messageLabel)
     }
     
+    
+    /// Returns the CGRect for the starting position of the notification.
+    /// This should not be called directly
+    ///
+    /// - Parameters:
+    ///   - side: set the location from which the notification will appear
+    ///   - fullWidth: determines if the notification will cover the full width of the screen
+    /// - Returns: the starting postion of the notification
     private func setStartFrom(side: Side, fullWidth: Bool) -> CGRect {
         let frame: CGRect
-        let width = fullWidth ? dgScreenWidth : (dgScreenWidth - 40.0)
+        let width = fullWidth ? DGNotificationView.dgScreenWidth : (DGNotificationView.dgScreenWidth - 40.0)
         xPadding = fullWidth ? 0.0 : 20.0
         
         switch side {
         case .topLeft:
-            frame = CGRect(x: -dgScreenWidth + xPadding, y: shadowMargin + topCarrierMargin, width: width, height: vHeight)
+            frame = CGRect(x: -DGNotificationView.dgScreenWidth + xPadding,
+                           y: shadowMargin + topCarrierMargin,
+                           width: width, height: vHeight)
         case .topRight:
-            frame = CGRect(x: dgScreenWidth + xPadding, y: shadowMargin + topCarrierMargin, width: width, height: vHeight)
+            frame = CGRect(x: DGNotificationView.dgScreenWidth + xPadding,
+                           y: shadowMargin + topCarrierMargin,
+                           width: width, height: vHeight)
         case .bottomLeft:
-            frame = CGRect(x: -dgScreenWidth + xPadding, y: dgScreenHeight - vHeight - shadowMargin, width: width, height: vHeight)
+            frame = CGRect(x: -DGNotificationView.dgScreenWidth + xPadding,
+                           y: DGNotificationView.dgScreenHeight - vHeight - shadowMargin,
+                           width: width, height: vHeight)
         case .bottomRight:
-            frame = CGRect(x: dgScreenWidth + xPadding, y: dgScreenHeight - vHeight - shadowMargin, width: width, height: vHeight)
+            frame = CGRect(x: DGNotificationView.dgScreenWidth + xPadding,
+                           y: DGNotificationView.dgScreenHeight - vHeight - shadowMargin,
+                           width: width, height: vHeight)
         case .top:
-            frame = CGRect(x: xPadding, y: 0 - vHeight - shadowMargin, width: width, height: vHeight)
+            frame = CGRect(x: xPadding,
+                           y: 0 - vHeight - shadowMargin,
+                           width: width, height: vHeight)
         case .bottom:
-            frame = CGRect(x: xPadding, y: dgScreenHeight + shadowMargin, width: width, height: vHeight)
+            frame = CGRect(x: xPadding,
+                           y: DGNotificationView.dgScreenHeight + shadowMargin,
+                           width: width, height: vHeight)
             
         }
         return frame
     }
     
+    
+    /// Used to customize the color of the title, message and background.
+    /// If a parameter value is set to 'nil', it will remain the default color.
+    ///
+    /// - Parameters:
+    ///   - txtColor: UIColor for all in view text (optional)
+    ///   - bgColor: UIColor for view background (optional)
+    public func set(txtColor: UIColor?, bgColor: UIColor?) {
+        if txtColor != nil { textColor = txtColor! }
+        guard bgColor != nil else { return }
+        backgroundColor = bgColor
+    }
+    
+    
+    /// Animates the view into and out of the device's viewable area.
+    ///
+    /// - Parameters:
+    ///   - seconds: Time the notification view will stay on screen (not including animation time)
+    ///   - completion: Use this closure to do something after the view has animated off screen
     public func displayFor(seconds: Double, completion: @escaping (_ finished: Bool) -> Void) {
-        guard let s = side else { return }
+        let s = side
         let yToPosition1: CGFloat
         let yToPosition2: CGFloat
         let xToPosition1: CGFloat
@@ -147,18 +275,18 @@ public class DGNotificationView: UIView {
         case .topRight, .bottomRight:
             yToPosition1 = center.y
             yToPosition2 = center.y
-            xToPosition1 = dgScreenWidth / 2
-            xToPosition2 = dgScreenWidth * 1.5 + xPadding
+            xToPosition1 = DGNotificationView.dgScreenWidth / 2
+            xToPosition2 = DGNotificationView.dgScreenWidth * 1.5 + xPadding
         case .bottom:
-            yToPosition1 = dgScreenHeight - vHeight / 2 - shadowMargin
-            yToPosition2 = dgScreenHeight + vHeight / 2 + shadowMargin
+            yToPosition1 = DGNotificationView.dgScreenHeight - vHeight / 2 - shadowMargin
+            yToPosition2 = DGNotificationView.dgScreenHeight + vHeight / 2 + shadowMargin
             xToPosition1 = center.x
             xToPosition2 = xToPosition1
         case .topLeft, .bottomLeft:
             yToPosition1 = center.y
             yToPosition2 = center.y
-            xToPosition1 = dgScreenWidth / 2
-            xToPosition2 = -dgScreenWidth / 1.5 + -xPadding
+            xToPosition1 = DGNotificationView.dgScreenWidth / 2
+            xToPosition2 = -DGNotificationView.dgScreenWidth / 1.5 + -xPadding
         }
         
         UIView.animate(withDuration: 0.3, delay: 0.4, options: [.curveEaseOut], animations: {
