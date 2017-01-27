@@ -11,10 +11,14 @@ import DGNotifyView
 
 class ViewController: UIViewController {
     
-    // I'm calling the top-level class because I'm using
+    // I'm calling the top-level class because this app is using
     // a variety of notifications for the demo. If you're
     // using a single type, just initiate that one ex: 'myNote: DGNotifyView!'
     var notifyView: DGNotificationView!
+    
+    // This variable is put here because this app is
+    // demoing all sides, you probably won't need to do this.
+    var side: DGNotificationView.Side!
     
     var displaySeconds: Double! {
         didSet {
@@ -27,14 +31,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var fullWidthSwitch: UISwitch!
     @IBOutlet weak var secondSlider: UISlider!
     @IBOutlet weak var secondLabel: UILabel!
+    @IBOutlet weak var topSegment: UISegmentedControl!
+    @IBOutlet weak var bottomSegment: UISegmentedControl!
     
     let noteTitle = "Sample Notification"
     let noteMessage = "This message can contain up to 3 lines of text. The text is required on initialization. Once initialized you can call the view to slide in from one of six locations."
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         displaySeconds = roundedOffSlider(value: secondSlider.value)
+        
+    }
+    
+    func toggleSeg(selected: UISegmentedControl) {
+        guard topSegment != nil , bottomSegment != nil else { return }
+        let off = -1
+        if selected == topSegment {
+            bottomSegment.selectedSegmentIndex = off
+        } else {
+            topSegment.selectedSegmentIndex = off
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,93 +73,79 @@ class ViewController: UIViewController {
         return rounded
     }
     
-    
-    // This IBAction looks crazy since I'm demoing every type of DGNotificationView from
+    // ********
+    // The way notifyView is being called is a bit strange
+    // since I'm demoing every type of DGNotifyView presented from
     // every location. I don't recommend doing this. lol.
     // Here's an example of how yours might look:
-//
-//    func showNote() {
-//        notifyView = DGNotifyViewRounded(fromSide: .top, fullWidth: false, cornerRadius: 5.0,
-//                                         title: "Title", message: "My important message for the user")
-//        
-//        view.addSubview(notifyView) <- be sure to do this or you'll have a bad time
-//        notifyView.displayFor(seconds: 0.5) { (finished) in 
-//              do cool stuff after the animation is finished
-//        }
-//    }
-//
-    @IBAction func notifyBtnTapped(_ sender: UIButton) {
-        sender.isEnabled = false
+    //
+    //    func showNote() {
+    //        notifyView = DGNotifyViewRounded(fromSide: .top, fullWidth: false, cornerRadius: 5.0,
+    //                                         title: "Title", message: "My important message for the user")
+    //
+    //        view.addSubview(notifyView) <- be sure to do this or you'll have a bad time
+    //        notifyView.displayFor(seconds: 0.5) { (finished) in
+    //              do cool stuff after the animation is finished
+    //        }
+    //    }
+    // ********
+    
+    private func createNotification() {
+        guard side != nil else { return }
+        let img = DemoImage.imageOfDemoImg
         let roundCorners = rCornersSwitch.isOn
         let hasImage  = imgSwitch.isOn
         let fullWidth = fullWidthSwitch.isOn
         let cr:CGFloat = 5.0
         
-        switch sender.tag {
-        case 0:
-            if roundCorners && !hasImage {
-              notifyView = DGNotifyViewRounded(fromSide: .topLeft, fullWidth: fullWidth, cornerRadius: cr, title: noteTitle, message: noteMessage)
-            } else if roundCorners && hasImage {
-                notifyView = DGNotifyViewRoundedWithImg(fromSide: .topLeft, fullWidth: fullWidth, cornerRadius: cr, title: noteTitle, message: noteMessage, img: DemoImage.imageOfDemoImg)
-            } else if !roundCorners && !hasImage {
-                notifyView = DGNotifyView(fromSide: .topLeft, fullWidth: fullWidth, title: noteTitle, message: noteMessage)
-            } else {
-                notifyView = DGNotifyViewWithImg(fromSide: .topLeft, fullWidth: fullWidth, title: noteTitle, message: noteMessage, img: DemoImage.imageOfDemoImg)
+        
+        if roundCorners {
+            if hasImage {
+                notifyView = DGNotifyViewRoundedWithImg(fromSide: side, fullWidth: fullWidth, cornerRadius: cr, title: noteTitle, message: noteMessage, img: img)
             }
-        case 1:
-            if roundCorners && !hasImage {
-                notifyView = DGNotifyViewRounded(fromSide: .top, fullWidth: fullWidth, cornerRadius: cr, title: noteTitle, message: noteMessage)
-            } else if roundCorners && hasImage {
-                notifyView = DGNotifyViewRoundedWithImg(fromSide: .top, fullWidth: fullWidth, cornerRadius: cr, title: noteTitle, message: noteMessage, img: DemoImage.imageOfDemoImg)
-            } else if !roundCorners && !hasImage {
-                notifyView = DGNotifyView(fromSide: .top, fullWidth: fullWidth, title: noteTitle, message: noteMessage)
-            } else {
-                notifyView = DGNotifyViewWithImg(fromSide: .top, fullWidth: fullWidth, title: noteTitle, message: noteMessage, img: DemoImage.imageOfDemoImg)
+            notifyView = DGNotifyViewRounded(fromSide: side, fullWidth: fullWidth, cornerRadius: cr, title: noteTitle, message: noteMessage)
+        } else {
+            if hasImage {
+                notifyView = DGNotifyView(fromSide: side, fullWidth: fullWidth, title: noteTitle, message: noteMessage)
             }
-        case 2:
-            if roundCorners && !hasImage {
-                notifyView = DGNotifyViewRounded(fromSide: .topRight, fullWidth: fullWidth, cornerRadius: cr, title: noteTitle, message: noteMessage)
-            } else if roundCorners && hasImage {
-                notifyView = DGNotifyViewRoundedWithImg(fromSide: .topRight, fullWidth: fullWidth, cornerRadius: cr, title: noteTitle, message: noteMessage, img: DemoImage.imageOfDemoImg)
-            } else if !roundCorners && !hasImage {
-                notifyView = DGNotifyView(fromSide: .topRight, fullWidth: fullWidth, title: noteTitle, message: noteMessage)
-            } else {
-                notifyView = DGNotifyViewWithImg(fromSide: .topRight, fullWidth: fullWidth, title: noteTitle, message: noteMessage, img: DemoImage.imageOfDemoImg)
-            }
-        case 3:
-            if roundCorners && !hasImage {
-                notifyView = DGNotifyViewRounded(fromSide: .bottomLeft, fullWidth: fullWidth, cornerRadius: cr, title: noteTitle, message: noteMessage)
-            } else if roundCorners && hasImage {
-                notifyView = DGNotifyViewRoundedWithImg(fromSide: .bottomLeft, fullWidth: fullWidth, cornerRadius: cr, title: noteTitle, message: noteMessage, img: DemoImage.imageOfDemoImg)
-            } else if !roundCorners && !hasImage {
-                notifyView = DGNotifyView(fromSide: .bottomLeft, fullWidth: fullWidth, title: noteTitle, message: noteMessage)
-            } else {
-                notifyView = DGNotifyViewWithImg(fromSide: .bottomLeft, fullWidth: fullWidth, title: noteTitle, message: noteMessage, img: DemoImage.imageOfDemoImg)
-            }
-        case 4:
-            if roundCorners && !hasImage {
-                notifyView = DGNotifyViewRounded(fromSide: .bottom, fullWidth: fullWidth, cornerRadius: cr, title: noteTitle, message: noteMessage)
-            } else if roundCorners && hasImage {
-                notifyView = DGNotifyViewRoundedWithImg(fromSide: .bottom, fullWidth: fullWidth, cornerRadius: cr, title: noteTitle, message: noteMessage, img: DemoImage.imageOfDemoImg)
-            } else if !roundCorners && !hasImage {
-                notifyView = DGNotifyView(fromSide: .bottom, fullWidth: fullWidth, title: noteTitle, message: noteMessage)
-            } else {
-                notifyView = DGNotifyViewWithImg(fromSide: .bottom, fullWidth: fullWidth, title: noteTitle, message: noteMessage, img: DemoImage.imageOfDemoImg)
-            }
+            notifyView = DGNotifyViewWithImg(fromSide: side, fullWidth: fullWidth, title: noteTitle, message: noteMessage, img: img)
+        }
+    }
+
+    @IBAction func switchTapped(_ sender: UISwitch) {
+        createNotification()
+    }
+    
+    @IBAction func NotifSegTapped(_ sender: UISegmentedControl) {
+        toggleSeg(selected: sender)
+        
+        let location = (sender.tag, sender.selectedSegmentIndex)
+        switch location {
+        case (0,0):
+            print("print case")
+            side = .topLeft
+        case (0,1):
+            side = .top
+        case (0,2):
+            side = .topRight
+        case (1,0):
+            side = .bottomLeft
+        case (1,1):
+            side = .bottom
+        case (1,2):
+            side = .bottomRight
         default:
-            if roundCorners && !hasImage {
-                notifyView = DGNotifyViewRounded(fromSide: .bottomRight, fullWidth: fullWidth, cornerRadius: cr, title: noteTitle, message: noteMessage)
-            } else if roundCorners && hasImage {
-                notifyView = DGNotifyViewRoundedWithImg(fromSide: .bottomRight, fullWidth: fullWidth, cornerRadius: cr, title: noteTitle, message: noteMessage, img: DemoImage.imageOfDemoImg)
-            } else if !roundCorners && !hasImage {
-                notifyView = DGNotifyView(fromSide: .bottomRight, fullWidth: fullWidth, title: noteTitle, message: noteMessage)
-            } else {
-                notifyView = DGNotifyViewWithImg(fromSide: .bottomRight, fullWidth: fullWidth, title: noteTitle, message: noteMessage, img: DemoImage.imageOfDemoImg)
-            }
+            print("you should be here")
+            side = .top
         }
         
-        self.view.addSubview(notifyView!)
-        notifyView.set(txtColor: UIColor.red, bgColor: UIColor.black)
+        createNotification()
+    }
+    
+    
+    @IBAction func sendNotifTapped(_ sender: UIButton) {
+        guard notifyView != nil else { return }
+        view.addSubview(notifyView)
         notifyView.displayFor(seconds: displaySeconds!) { (finished) in
             if finished {
                 self.nilNotifyView()
@@ -151,8 +155,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func secondSliderMoved(_ sender: UISlider) {
+        createNotification()
         displaySeconds = roundedOffSlider(value: sender.value)
     }
+
 
 }
 
