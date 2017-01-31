@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,9 +38,6 @@
                                 <rect key="frame" x="298" y="60" width="51" height="31"/>
                                 <color key="tintColor" red="0.99215686270000003" green="0.57254901960000004" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="onTintColor" red="0.99215686270000003" green="0.57254901960000004" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="switchTapped:" destination="vXZ-lx-hvc" eventType="valueChanged" id="zfM-8Q-TjF"/>
-                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3c-tb-GVh">
                                 <rect key="frame" x="28" y="105" width="83" height="20"/>
@@ -51,9 +49,6 @@
                                 <rect key="frame" x="298" y="99" width="51" height="31"/>
                                 <color key="tintColor" red="0.99215686270000003" green="0.57254901960000004" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="onTintColor" red="0.99215686270000003" green="0.57254901960000004" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="switchTapped:" destination="vXZ-lx-hvc" eventType="valueChanged" id="0al-12-N2O"/>
-                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display Time (seconds)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU9-cB-lRt">
                                 <rect key="frame" x="28" y="190" width="170" height="20"/>
@@ -71,9 +66,6 @@
                                 <rect key="frame" x="298" y="138" width="51" height="31"/>
                                 <color key="tintColor" red="0.99215686270000003" green="0.57254901960000004" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="onTintColor" red="0.99215686270000003" green="0.57254901960000004" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="switchTapped:" destination="vXZ-lx-hvc" eventType="valueChanged" id="xUk-Rj-wTw"/>
-                                </connections>
                             </switch>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slz-4n-7m6">
                                 <rect key="frame" x="307" y="222" width="40" height="22"/>

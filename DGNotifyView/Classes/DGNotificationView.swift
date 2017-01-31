@@ -33,7 +33,8 @@ public class DGNotificationView: UIView {
     
     static let dgScreenWidth = UIScreen.main.bounds.width
     static let dgScreenHeight = UIScreen.main.bounds.height
-    
+
+//MARK: - Private variables
     private var _displayTime: Double!
     private var _title: String!
     private var _message: String!
@@ -41,7 +42,8 @@ public class DGNotificationView: UIView {
     private var _cornerRadius: CGFloat!
     private var _image: UIImage!
     
-    
+
+//MARK: - Public (read only)
     /// The number of seconds the notification should be displayed
     public var displayTime: Double {
         get {
@@ -89,16 +91,19 @@ public class DGNotificationView: UIView {
             return _image
         }
     }
-    
+
+//MARK: - Private config varibles
     private var titleLabel: UILabel!
     private var messageLabel: UILabel!
     private var imageView: UIImageView!
 
+//MARK: Layout variables
     private let vHeight:CGFloat = 68.0
     private let shadowMargin:CGFloat = 4.0
     private let topCarrierMargin:CGFloat = 20.0
     private var xPadding: CGFloat!
     
+//MARK: Color variables
     private var textColor = UIColor.darkText {
         didSet {
             guard titleLabel != nil, messageLabel != nil else { return }
@@ -113,7 +118,7 @@ public class DGNotificationView: UIView {
         }
     }
     
-    
+//MARK: - Init functions
     public init(fullWidth: Bool, side: Side, cornerRadius: CGFloat, image: UIImage?, title: String, message: String) {
         _side = side
         _title = title
@@ -136,14 +141,51 @@ public class DGNotificationView: UIView {
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+
     
-    private func addShadow() {
-        layer.cornerRadius  = cornerRadius
-        layer.shadowColor   = UIColor.black.cgColor
-        layer.shadowOffset  = CGSize.zero
-        layer.shadowRadius  = 5.0
-        layer.shadowOpacity = 0.5
-        super.backgroundColor = UIColor.clear
+//MARK: - Configuration functions
+    private func addSwipeRecognizer() {
+        let directions = swipeDirections()
+    
+        let swipe01 = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe01(gesture:)))
+        swipe01.direction = directions[0]
+        self.addGestureRecognizer(swipe01)
+    
+        if directions.count == 2 {
+            let swipe02 = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe02(gesture:)))
+            swipe02.direction = directions[1]
+            self.addGestureRecognizer(swipe02)
+        }
+    }
+    
+    private func swipeDirections() -> [UISwipeGestureRecognizerDirection] {
+        var directions = [UISwipeGestureRecognizerDirection]()
+        
+        switch side {
+        case .topLeft, .top, .topRight:
+            directions.append(UISwipeGestureRecognizerDirection.up)
+        case .bottomLeft, .bottom, .bottomRight:
+            directions.append(UISwipeGestureRecognizerDirection.down)
+        }
+        
+        switch  side {
+        case .topLeft, .bottomLeft:
+            directions.append(UISwipeGestureRecognizerDirection.left)
+        case .topRight, .bottomRight:
+            directions.append(UISwipeGestureRecognizerDirection.right)
+        default:
+            break
+        }
+        
+        return directions
+    }
+    
+    
+    func handleSwipe01(gesture: UIGestureRecognizer) {
+        print("swiped correctly")
+    }
+    func handleSwipe02(gesture: UIGestureRecognizer) {
+        print("swiped correctly")
     }
     
     
@@ -195,6 +237,16 @@ public class DGNotificationView: UIView {
         messageLabel.textColor = textColor
         messageLabel.font = UIFont(name: messageLabel.font.fontName, size: 12)
         addSubview(messageLabel)
+    }
+    
+    
+    private func addShadow() {
+        layer.cornerRadius  = cornerRadius
+        layer.shadowColor   = UIColor.black.cgColor
+        layer.shadowOffset  = CGSize.zero
+        layer.shadowRadius  = 5.0
+        layer.shadowOpacity = 0.5
+        super.backgroundColor = UIColor.clear
     }
     
     
@@ -253,7 +305,7 @@ public class DGNotificationView: UIView {
         backgroundColor = bgColor
     }
     
-    
+//MARK: - Animation functions
     /// Animates the view into and out of the device's viewable area.
     ///
     /// - Parameters:

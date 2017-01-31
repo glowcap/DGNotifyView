@@ -34,6 +34,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var topSegment: UISegmentedControl!
     @IBOutlet weak var bottomSegment: UISegmentedControl!
     
+    // This is only for the demo app
+    // It's used in sendNotifTapped
+    var selectedDirection: Bool {
+        guard (topSegment != nil || bottomSegment != nil) else { return false }
+        guard (topSegment.selectedSegmentIndex >= 0 || bottomSegment.selectedSegmentIndex >= 0) else { return false }
+        return true
+    }
+    
     let noteTitle = "Sample Notification"
     let noteMessage = "This message can contain up to 3 lines of text. The text is required on initialization. Once initialized you can call the view to slide in from one of six locations."
 
@@ -45,6 +53,7 @@ class ViewController: UIViewController {
         
     }
     
+    
     func toggleSeg(selected: UISegmentedControl) {
         guard topSegment != nil , bottomSegment != nil else { return }
         let off = -1
@@ -55,10 +64,12 @@ class ViewController: UIViewController {
         }
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     // Here the instance of DGNotificationView is being recycled
     // so I'm wiping out the exisiting one
@@ -67,11 +78,13 @@ class ViewController: UIViewController {
         notifyView = nil
     }
 
+    
     private func roundedOffSlider(value: Float) -> Double {
         let rounded = Double(round(value))
 
         return rounded
     }
+    
     
     // ********
     // The way notifyView is being called is a bit strange
@@ -89,7 +102,6 @@ class ViewController: UIViewController {
     //        }
     //    }
     // ********
-    
     private func createNotification() {
         guard side != nil else { return }
         let img = DemoImage.imageOfDemoImg
@@ -101,20 +113,24 @@ class ViewController: UIViewController {
         
         if roundCorners {
             if hasImage {
-                notifyView = DGNotifyViewRoundedWithImg(fromSide: side, fullWidth: fullWidth, cornerRadius: cr, title: noteTitle, message: noteMessage, img: img)
+                notifyView = DGNotifyViewRoundedWithImg(fromSide: side, fullWidth: fullWidth, cornerRadius: cr,
+                                                        title: noteTitle, message: noteMessage, img: img)
+                return
             }
-            notifyView = DGNotifyViewRounded(fromSide: side, fullWidth: fullWidth, cornerRadius: cr, title: noteTitle, message: noteMessage)
+            notifyView = DGNotifyViewRounded(fromSide: side, fullWidth: fullWidth, cornerRadius: cr,
+                                             title: noteTitle, message: noteMessage)
         } else {
             if hasImage {
-                notifyView = DGNotifyView(fromSide: side, fullWidth: fullWidth, title: noteTitle, message: noteMessage)
+                notifyView = DGNotifyViewWithImg(fromSide: side, fullWidth: fullWidth,
+                                                 title: noteTitle, message: noteMessage, img: img)
+                return
             }
-            notifyView = DGNotifyViewWithImg(fromSide: side, fullWidth: fullWidth, title: noteTitle, message: noteMessage, img: img)
+            
+            notifyView = DGNotifyView(fromSide: side, fullWidth: fullWidth,
+                                      title: noteTitle, message: noteMessage)
         }
     }
 
-    @IBAction func switchTapped(_ sender: UISwitch) {
-        createNotification()
-    }
     
     @IBAction func NotifSegTapped(_ sender: UISegmentedControl) {
         toggleSeg(selected: sender)
@@ -138,13 +154,12 @@ class ViewController: UIViewController {
             print("you should be here")
             side = .top
         }
-        
-        createNotification()
     }
     
     
     @IBAction func sendNotifTapped(_ sender: UIButton) {
-        guard notifyView != nil else { return }
+        guard selectedDirection else { return }
+        createNotification()
         view.addSubview(notifyView)
         notifyView.displayFor(seconds: displaySeconds!) { (finished) in
             if finished {
@@ -154,8 +169,8 @@ class ViewController: UIViewController {
         }
     }
     
+    
     @IBAction func secondSliderMoved(_ sender: UISlider) {
-        createNotification()
         displaySeconds = roundedOffSlider(value: sender.value)
     }
 
