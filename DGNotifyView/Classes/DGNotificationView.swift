@@ -144,49 +144,7 @@ public class DGNotificationView: UIView {
 
     
 //MARK: - Configuration functions
-    private func addSwipeRecognizer() {
-        let directions = swipeDirections()
-    
-        let swipe01 = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe01(gesture:)))
-        swipe01.direction = directions[0]
-        self.addGestureRecognizer(swipe01)
-    
-        if directions.count == 2 {
-            let swipe02 = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe02(gesture:)))
-            swipe02.direction = directions[1]
-            self.addGestureRecognizer(swipe02)
-        }
-    }
-    
-    private func swipeDirections() -> [UISwipeGestureRecognizerDirection] {
-        var directions = [UISwipeGestureRecognizerDirection]()
-        
-        switch side {
-        case .topLeft, .top, .topRight:
-            directions.append(UISwipeGestureRecognizerDirection.up)
-        case .bottomLeft, .bottom, .bottomRight:
-            directions.append(UISwipeGestureRecognizerDirection.down)
-        }
-        
-        switch  side {
-        case .topLeft, .bottomLeft:
-            directions.append(UISwipeGestureRecognizerDirection.left)
-        case .topRight, .bottomRight:
-            directions.append(UISwipeGestureRecognizerDirection.right)
-        default:
-            break
-        }
-        
-        return directions
-    }
-    
-    
-    func handleSwipe01(gesture: UIGestureRecognizer) {
-        print("swiped correctly")
-    }
-    func handleSwipe02(gesture: UIGestureRecognizer) {
-        print("swiped correctly")
-    }
+
     
     
     /// Configures the contents of the notification. This cannot be accessed directly
