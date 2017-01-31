@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/cocoapods/l/DGNotifyView.svg?style=flat)](http://cocoapods.org/pods/DGNotifyView)
 [![Platform](https://img.shields.io/cocoapods/p/DGNotifyView.svg?style=flat)](http://cocoapods.org/pods/DGNotifyView)
 
-DGNotifyView is a Swift-based API that allows quick in-app notification views. The notification views can include images, have rounded corners, and best of all there preprogrammed with animations to slide in to six different locations. You can even set the notification’s display duration!
+DGNotifyView is a Swift-based API that allows quick in-app notification views. The notification views can include images, have rounded corners, and best of all there preprogrammed with animations to slide (or spring!) into six different locations. You can even set the notification’s display duration!
 
 ![Screenshot](https://cloud.githubusercontent.com/assets/10408147/22461391/6da12fa0-e7ec-11e6-9209-8fd1e15d05da.png)
 
@@ -33,6 +33,13 @@ DGNotifyView gives you four options for notifications:
 - DGNotifyViewWithImg: This allows you to add an image to the basic notification
 - DGNotifyViewRounded: This is a basic notification view with rounded edges
 - DGNotifyViewRoundedWithImg: Yep. It’s a rounded notification view with image support.
+
+Now with Springy Views! These are the same as above but use a spring animation to come into view:
+
+- DGNotifyViewSpringy
+- DGNotifyViewSpringyImg
+- DGNotifyViewRoundedSpringy
+- DGNotifyViewRoundedImgSpringy
 
 #### Initializing
 Since DGNotifyView is based on UIView, you’ll need to `import UIKit` where you are initializing DGNotifyView. Then:
@@ -75,7 +82,7 @@ myNotif.displayFor(seconds: 1.0) { (finished) in
 There are a few things I’d like to add in the future:
 - [ ] ~~Add ability to set custom colors for text and background~~
 - [ ] Set custom font
-- [ ] Spring animation option
+- [ ] ~~Spring animation option~~
 - [ ] Swipe out of view
 
 ## Contributing
