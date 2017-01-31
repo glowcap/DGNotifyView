@@ -8,7 +8,7 @@
 
 DGNotifyView is a Swift-based API that allows quick in-app notification views. The notification views can include images, have rounded corners, and best of all there preprogrammed with animations to slide in to six different locations. You can even set the notification’s display duration!
 
-![Screenshot](https://cloud.githubusercontent.com/assets/10408147/22277068/dd63a71e-e2fb-11e6-8722-b22bcbf60686.png)
+![Screenshot](https://cloud.githubusercontent.com/assets/10408147/22461391/6da12fa0-e7ec-11e6-9209-8fd1e15d05da.png)
 
 ## Example
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
