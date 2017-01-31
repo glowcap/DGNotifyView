@@ -20,8 +20,8 @@ public class DGNotifyView: DGNotificationView {
     ///   - title: the title for the notification
     ///   - message: the message for the notification
     public init(fromSide: Side, fullWidth: Bool, title: String, message: String) {
-        super.init(fullWidth: fullWidth, side: fromSide, cornerRadius: 0.0,
-                   image: nil, title: title, message: message)
+        super.init(fullWidth: fullWidth, side: fromSide, cornerRadius: 0.0, image: nil,
+                   useSprings: false, title: title, message: message)
     }
     
     required public init?(coder aDecoder: NSCoder) {
