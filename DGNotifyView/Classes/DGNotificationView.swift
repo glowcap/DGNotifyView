@@ -41,6 +41,7 @@ public class DGNotificationView: UIView {
     private var _side: Side!
     private var _cornerRadius: CGFloat!
     private var _image: UIImage!
+    private var _useSprings: Bool!
     
 
 //MARK: - Public (read only)
@@ -85,10 +86,17 @@ public class DGNotificationView: UIView {
     
     
     /// The image used in imageView
-    /// ** imageView's width and height are 64.0 **
+    /// ** imageView's width and height are 60.0 **
     public var image: UIImage {
         get {
             return _image
+        }
+    }
+    
+    /// Animate in with spring animation
+    public var useSprings: Bool {
+        get {
+            return _useSprings
         }
     }
 
@@ -119,10 +127,25 @@ public class DGNotificationView: UIView {
     }
     
 //MARK: - Init functions
-    public init(fullWidth: Bool, side: Side, cornerRadius: CGFloat, image: UIImage?, title: String, message: String) {
+    
+    /// Base init function for all DGNotifyViews. This should not be called directly.
+    /// Instead, call one of the subclasses and init with their parameters. Everything
+    /// else will be handled behind the scenes
+    ///
+    /// - Parameters:
+    ///   - fullWidth: view should span the full width of the screen
+    ///   - side: which side the view will appear from
+    ///   - cornerRadius: the radius of both the view and image view (if applicable)
+    ///   - image: UIImage used for the view (if applicable)
+    ///   - useSprings: should use spring animation to enter view
+    ///   - title: notification title
+    ///   - message: notification message
+    public init(fullWidth: Bool, side: Side, cornerRadius: CGFloat, image: UIImage?,
+                useSprings: Bool, title: String, message: String) {
         _side = side
         _title = title
         _message = message
+        _useSprings = useSprings
         _cornerRadius = cornerRadius
         
         if let img = image {
@@ -146,13 +169,13 @@ public class DGNotificationView: UIView {
 //MARK: - Configuration functions
     /// Configures the contents of the notification. This cannot be accessed directly
     private func configureContents() {
-        let topMargin:CGFloat = 2
-        let imageWH: CGFloat = 64
+        let topMargin:CGFloat = 4
+        let imageWH: CGFloat = 60
         let leftLabelMarginWithImage:CGFloat = imageWH + 10
         let labelWidthWithImage:CGFloat = bounds.width - leftLabelMarginWithImage
         
         if _image != nil {
-            imageView = UIImageView(frame: CGRect(x: 2, y: topMargin, width: imageWH, height: imageWH))
+            imageView = UIImageView(frame: CGRect(x: 4, y: topMargin, width: imageWH, height: imageWH))
             imageView.image = image
             imageView.layer.cornerRadius = cornerRadius
             imageView.contentMode = .scaleAspectFit
@@ -296,19 +319,39 @@ public class DGNotificationView: UIView {
             xToPosition2 = -DGNotificationView.dgScreenWidth / 1.5 + -xPadding
         }
         
-        UIView.animate(withDuration: 0.3, delay: 0.4, options: [.curveEaseOut], animations: {
-            self.center.y = yToPosition1
-            self.center.x = xToPosition1
-        }, completion: {(done) in
-            if done {
-                UIView.animate(withDuration: 0.4, delay: seconds, options: [.curveEaseOut], animations: {
-                    self.center.y = yToPosition2
-                    self.center.x = xToPosition2
-                }, completion: { (completed) in
-                    completion(true)
-                })
-            }
-        })
+        if useSprings {
+            UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.8, options: .curveEaseInOut, animations: {
+                self.center.y = yToPosition1
+                self.center.x = xToPosition1
+            }, completion: {(done) in
+                if done {
+                    UIView.animate(withDuration: 0.4, delay: seconds, options: [.curveEaseOut], animations: {
+                        self.center.y = yToPosition2
+                        self.center.x = xToPosition2
+                    }, completion: { (completed) in
+                        completion(true)
+                    })
+                }
+                
+            })
+        } else {
+            UIView.animate(withDuration: 0.3, delay: 0.4, options: [.curveEaseOut], animations: {
+                self.center.y = yToPosition1
+                self.center.x = xToPosition1
+            }, completion: {(done) in
+                if done {
+                    UIView.animate(withDuration: 0.4, delay: seconds, options: [.curveEaseOut], animations: {
+                        self.center.y = yToPosition2
+                        self.center.x = xToPosition2
+                    }, completion: { (completed) in
+                        completion(true)
+                    })
+                }
+            })
+        }
+        
+        
+        
     }
     
     

@@ -23,7 +23,7 @@ public class DGNotifyViewRoundedWithImg: DGNotificationView {
     ///   - img: UIImage used in the notification **img size 64.0**
     public init(fromSide: Side, fullWidth: Bool, cornerRadius: CGFloat, title: String, message: String, img: UIImage) {
         super.init(fullWidth: fullWidth, side: fromSide, cornerRadius: cornerRadius,
-                   image: img, title: title, message: message)
+                   image: img, useSprings: false, title: title, message: message)
     }
     
     required public init?(coder aDecoder: NSCoder) {

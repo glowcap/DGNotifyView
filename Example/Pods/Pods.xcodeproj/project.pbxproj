@@ -10,6 +10,10 @@
 		349BF30A3A2FACC05813546A3D7CA28E /* DGNotifyView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C66662BF6D077E41BF27ACBB4CF495B4 /* DGNotifyView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E475D7D371F04E1371B7D08BBB731EC /* Pods-DGNotifyView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58224B0E0BFDA1B3F1BE50F64668F3B2 /* Pods-DGNotifyView_Tests-dummy.m */; };
 		7060B3037275BBED2562B875FC17CE55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		830E31BC1E403C9400D2267A /* DGNotifyViewSpringy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E31BB1E403C9400D2267A /* DGNotifyViewSpringy.swift */; };
+		830E31BE1E403CEB00D2267A /* DGNotifyViewSpringyImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E31BD1E403CEB00D2267A /* DGNotifyViewSpringyImg.swift */; };
+		830E31C01E403D3600D2267A /* DGNotifyViewRoundedSpringy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E31BF1E403D3600D2267A /* DGNotifyViewRoundedSpringy.swift */; };
+		830E31C41E403D9800D2267A /* DGNotifyViewRoundedImgSpringy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E31C31E403D9800D2267A /* DGNotifyViewRoundedImgSpringy.swift */; };
 		839F310D1E3585B500AF24F4 /* DGNotifyViewRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F310C1E3585B500AF24F4 /* DGNotifyViewRounded.swift */; };
 		839F310F1E35938A00AF24F4 /* DGNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F310E1E35938A00AF24F4 /* DGNotificationView.swift */; };
 		839F31111E360FE100AF24F4 /* DGNotifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F31101E360FE100AF24F4 /* DGNotifyView.swift */; };
@@ -52,6 +56,10 @@
 		7683092E8624B7081C95670419FAA0CB /* Pods-DGNotifyView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DGNotifyView_Tests-resources.sh"; sourceTree = "<group>"; };
 		7E512CD5C293154EE6FB7A886E485A34 /* DGNotifyView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DGNotifyView.modulemap; sourceTree = "<group>"; };
 		8256E02756963633704B9F33A40BDDB5 /* DGNotifyView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DGNotifyView.xcconfig; sourceTree = "<group>"; };
+		830E31BB1E403C9400D2267A /* DGNotifyViewSpringy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyViewSpringy.swift; sourceTree = "<group>"; };
+		830E31BD1E403CEB00D2267A /* DGNotifyViewSpringyImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyViewSpringyImg.swift; sourceTree = "<group>"; };
+		830E31BF1E403D3600D2267A /* DGNotifyViewRoundedSpringy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyViewRoundedSpringy.swift; sourceTree = "<group>"; };
+		830E31C31E403D9800D2267A /* DGNotifyViewRoundedImgSpringy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyViewRoundedImgSpringy.swift; sourceTree = "<group>"; };
 		839F310C1E3585B500AF24F4 /* DGNotifyViewRounded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyViewRounded.swift; sourceTree = "<group>"; };
 		839F310E1E35938A00AF24F4 /* DGNotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotificationView.swift; sourceTree = "<group>"; };
 		839F31101E360FE100AF24F4 /* DGNotifyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyView.swift; sourceTree = "<group>"; };
@@ -180,6 +188,28 @@
 			);
 			sourceTree = "<group>";
 		};
+		830E31C11E403D5C00D2267A /* Standard Views */ = {
+			isa = PBXGroup;
+			children = (
+				839F31101E360FE100AF24F4 /* DGNotifyView.swift */,
+				839F31161E3639E600AF24F4 /* DGNotifyViewWithImg.swift */,
+				830E31BB1E403C9400D2267A /* DGNotifyViewSpringy.swift */,
+				830E31BD1E403CEB00D2267A /* DGNotifyViewSpringyImg.swift */,
+			);
+			name = "Standard Views";
+			sourceTree = "<group>";
+		};
+		830E31C21E403D7900D2267A /* Rounded Views */ = {
+			isa = PBXGroup;
+			children = (
+				839F310C1E3585B500AF24F4 /* DGNotifyViewRounded.swift */,
+				839F31141E3634C600AF24F4 /* DGNotifyViewRoundedWithImg.swift */,
+				830E31BF1E403D3600D2267A /* DGNotifyViewRoundedSpringy.swift */,
+				830E31C31E403D9800D2267A /* DGNotifyViewRoundedImgSpringy.swift */,
+			);
+			name = "Rounded Views";
+			sourceTree = "<group>";
+		};
 		9672AD95544C639BE84ECE676222A144 /* Pods-DGNotifyView_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,10 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				839F310E1E35938A00AF24F4 /* DGNotificationView.swift */,
-				839F310C1E3585B500AF24F4 /* DGNotifyViewRounded.swift */,
-				839F31141E3634C600AF24F4 /* DGNotifyViewRoundedWithImg.swift */,
-				839F31101E360FE100AF24F4 /* DGNotifyView.swift */,
-				839F31161E3639E600AF24F4 /* DGNotifyViewWithImg.swift */,
+				830E31C21E403D7900D2267A /* Rounded Views */,
+				830E31C11E403D5C00D2267A /* Standard Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -380,8 +408,12 @@
 				839F310F1E35938A00AF24F4 /* DGNotificationView.swift in Sources */,
 				F02236C16124543C2ED299158E394DFE /* DGNotifyView-dummy.m in Sources */,
 				839F310D1E3585B500AF24F4 /* DGNotifyViewRounded.swift in Sources */,
+				830E31C01E403D3600D2267A /* DGNotifyViewRoundedSpringy.swift in Sources */,
 				839F31151E3634C600AF24F4 /* DGNotifyViewRoundedWithImg.swift in Sources */,
 				839F31171E3639E600AF24F4 /* DGNotifyViewWithImg.swift in Sources */,
+				830E31BC1E403C9400D2267A /* DGNotifyViewSpringy.swift in Sources */,
+				830E31BE1E403CEB00D2267A /* DGNotifyViewSpringyImg.swift in Sources */,
+				830E31C41E403D9800D2267A /* DGNotifyViewRoundedImgSpringy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

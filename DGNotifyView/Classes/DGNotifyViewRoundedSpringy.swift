@@ -1,8 +1,8 @@
 //
-//  DGNotifyView.swift
+//  DGNotifyViewRoundedSpringy.swift
 //  Pods
 //
-//  Created by Daymein Gregorio on 2017/01/23.
+//  Created by Daymein Gregorio on 2017/01/31.
 //
 //
 
@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-public class DGNotifyViewRounded: DGNotificationView {
+public class DGNotifyViewRoundedSpringy: DGNotificationView {
     
     
     /// Initializes the notification with customizations
@@ -23,7 +23,7 @@ public class DGNotifyViewRounded: DGNotificationView {
     ///   - message: the message for the notification
     public init(fromSide: Side, fullWidth: Bool, cornerRadius: CGFloat, title: String, message: String) {
         super.init(fullWidth: fullWidth, side: fromSide, cornerRadius: cornerRadius,
-                   image: nil, useSprings: false, title: title, message: message)
+                   image: nil, useSprings: true, title: title, message: message)
     }
     
     required public init?(coder aDecoder: NSCoder) {

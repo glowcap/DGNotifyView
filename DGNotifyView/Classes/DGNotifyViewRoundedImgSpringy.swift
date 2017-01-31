@@ -1,8 +1,8 @@
 //
-//  DGNotifyView.swift
+//  DGNotifyViewRoundedImgSpringy.swift
 //  Pods
 //
-//  Created by Daymein Gregorio on 2017/01/23.
+//  Created by Daymein Gregorio on 2017/01/31.
 //
 //
 
@@ -10,8 +10,7 @@ import Foundation
 import UIKit
 
 
-public class DGNotifyViewRounded: DGNotificationView {
-    
+public class DGNotifyViewRoundedImgSpringy: DGNotificationView {
     
     /// Initializes the notification with customizations
     ///
@@ -21,9 +20,10 @@ public class DGNotifyViewRounded: DGNotificationView {
     ///   - cornerRadius: the corner radius of the notification
     ///   - title: the title for the notification
     ///   - message: the message for the notification
-    public init(fromSide: Side, fullWidth: Bool, cornerRadius: CGFloat, title: String, message: String) {
+    ///   - img: UIImage used in the notification **img size 64.0**
+    public init(fromSide: Side, fullWidth: Bool, cornerRadius: CGFloat, title: String, message: String, img: UIImage) {
         super.init(fullWidth: fullWidth, side: fromSide, cornerRadius: cornerRadius,
-                   image: nil, useSprings: false, title: title, message: message)
+                   image: img, useSprings: true, title: title, message: message)
     }
     
     required public init?(coder aDecoder: NSCoder) {

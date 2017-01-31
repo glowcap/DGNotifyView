@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var rCornersSwitch: UISwitch!
     @IBOutlet weak var imgSwitch: UISwitch!
     @IBOutlet weak var fullWidthSwitch: UISwitch!
+    @IBOutlet weak var animationSeg: UISegmentedControl!
     @IBOutlet weak var secondSlider: UISlider!
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var topSegment: UISegmentedControl!
@@ -42,8 +43,13 @@ class ViewController: UIViewController {
         return true
     }
     
+    var isSpringy: Bool {
+        guard animationSeg != nil else { return false }
+        return animationSeg.selectedSegmentIndex == 1
+    }
+    
     let noteTitle = "Sample Notification"
-    let noteMessage = "This message can contain up to 3 lines of text. The text is required on initialization. Once initialized you can call the view to slide in from one of six locations."
+    let noteMessage = "This message can contain up to 3 lines of text. The label text are init parameters."
 
     
     override func viewDidLoad() {
@@ -104,30 +110,50 @@ class ViewController: UIViewController {
     // ********
     private func createNotification() {
         guard side != nil else { return }
-        let img = DemoImage.imageOfDemoImg
+        let img = DemoImage.imageOfDemo
         let roundCorners = rCornersSwitch.isOn
         let hasImage  = imgSwitch.isOn
         let fullWidth = fullWidthSwitch.isOn
         let cr:CGFloat = 5.0
-        
-        
+                
         if roundCorners {
-            if hasImage {
+            if hasImage && isSpringy {
+                notifyView = DGNotifyViewRoundedImgSpringy(fromSide: side, fullWidth: fullWidth,
+                                                           cornerRadius: cr, title: noteTitle,
+                                                           message: noteMessage, img: img)
+                return
+            } else if hasImage {
                 notifyView = DGNotifyViewRoundedWithImg(fromSide: side, fullWidth: fullWidth, cornerRadius: cr,
                                                         title: noteTitle, message: noteMessage, img: img)
                 return
-            }
-            notifyView = DGNotifyViewRounded(fromSide: side, fullWidth: fullWidth, cornerRadius: cr,
-                                             title: noteTitle, message: noteMessage)
-        } else {
-            if hasImage {
-                notifyView = DGNotifyViewWithImg(fromSide: side, fullWidth: fullWidth,
-                                                 title: noteTitle, message: noteMessage, img: img)
+            } else if !hasImage && isSpringy {
+                notifyView = DGNotifyViewRoundedSpringy(fromSide: side, fullWidth: fullWidth, cornerRadius: cr,
+                                                        title: noteTitle, message: noteMessage)
+                return
+            } else {
+                notifyView = DGNotifyViewRounded(fromSide: side, fullWidth: fullWidth, cornerRadius: cr,
+                                                 title: noteTitle, message: noteMessage)
                 return
             }
             
-            notifyView = DGNotifyView(fromSide: side, fullWidth: fullWidth,
-                                      title: noteTitle, message: noteMessage)
+        } else {
+            if hasImage && isSpringy {
+                notifyView = DGNotifyViewSpringyImg(fromSide: side, fullWidth: fullWidth,
+                                                    title: noteTitle, message: noteMessage, img: img)
+                return
+            } else if hasImage {
+                notifyView = DGNotifyViewWithImg(fromSide: side, fullWidth: fullWidth,
+                                                 title: noteTitle, message: noteMessage, img: img)
+                return
+            } else if !hasImage && isSpringy {
+                notifyView = DGNotifyViewSpringy(fromSide: side, fullWidth: fullWidth,
+                                                 title: noteTitle, message: noteMessage)
+                return
+            } else {
+                notifyView = DGNotifyView(fromSide: side, fullWidth: fullWidth,
+                                          title: noteTitle, message: noteMessage)
+                return
+            }
         }
     }
 
@@ -138,7 +164,6 @@ class ViewController: UIViewController {
         let location = (sender.tag, sender.selectedSegmentIndex)
         switch location {
         case (0,0):
-            print("print case")
             side = .topLeft
         case (0,1):
             side = .top
