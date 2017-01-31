@@ -144,9 +144,6 @@ public class DGNotificationView: UIView {
 
     
 //MARK: - Configuration functions
-
-    
-    
     /// Configures the contents of the notification. This cannot be accessed directly
     private func configureContents() {
         let topMargin:CGFloat = 2

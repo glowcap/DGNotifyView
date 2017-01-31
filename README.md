@@ -76,6 +76,7 @@ There are a few things I’d like to add in the future:
 - [ ] ~~Add ability to set custom colors for text and background~~
 - [ ] Set custom font
 - [ ] Spring animation option
+- [ ] Swipe out of view
 
 ## Contributing
 If your interested in contributing:
@@ -88,7 +89,7 @@ If your interested in contributing:
 
 ## Author
 
-glowcap, doku005@yahoo.com
+glowcap, [@DaymeinG](https://twitter.com/DaymeinG)
 
 ## License
 
