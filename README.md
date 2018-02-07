@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/cocoapods/l/DGNotifyView.svg?style=flat)](http://cocoapods.org/pods/DGNotifyView)
 [![Platform](https://img.shields.io/cocoapods/p/DGNotifyView.svg?style=flat)](http://cocoapods.org/pods/DGNotifyView)
 
-DGNotifyView is a Swift-based API that allows quick in-app notification views. The notification views can include images, have rounded corners, and best of all there preprogrammed with animations to slide (or spring!) into six different locations. You can even set the notification’s display duration!
+DGNotifyView is a Swift-based framework that allows you to create quick, customizable in-app notification views. The notification can include an image, have rounded corners, and best of all they're preprogrammed with animations to slide (or spring!) into view from six different directions. You can even set the notification’s display duration!
 
 ![Screenshot](https://cloud.githubusercontent.com/assets/10408147/22461391/6da12fa0-e7ec-11e6-9209-8fd1e15d05da.png)
 
@@ -27,19 +27,13 @@ pod "DGNotifyView"
 If you prefer to install it manually, copy the files under the DGNotifyView subdirectory into your project. If your application is written in Swift, there’s no need for a bridging header. 
 
 ## Usage
-DGNotifyView gives you four options for notifications:
+DGNotifyView allows you to set parameters for:
 
-- DGNotifyView: This is the basic notification view with square edges
-- DGNotifyViewWithImg: This allows you to add an image to the basic notification
-- DGNotifyViewRounded: This is a basic notification view with rounded edges
-- DGNotifyViewRoundedWithImg: Yep. It’s a rounded notification view with image support.
-
-Now with Springy Views! These are the same as above but use a spring animation to come into view:
-
-- DGNotifyViewSpringy
-- DGNotifyViewSpringyImg
-- DGNotifyViewRoundedSpringy
-- DGNotifyViewRoundedImgSpringy
+- Notification corner radius (applies to both notification & image) 
+- Adding a square image
+- The direction the notification will appear from
+- Spring or Standard animation (Boing!)
+- Display duration
 
 #### Initializing
 Since DGNotifyView is based on UIView, you’ll need to `import UIKit` where you are initializing DGNotifyView. Then:
@@ -50,8 +44,7 @@ import DGNotifyView
 To add a notification, create an instance of your preferred view with the required information and where you want the view to appear from:
 
 ```swift
-let myNotif = DGNotifyView(fromSide: .top, fullWidth: false, 
-                           title: “My Title”, message: “Important message”)
+let myNotif = DGNotifyView(title: "My Title", message: "Important message")
 ```
 Don’t forget to add it to your view when you’re ready to use it:
 
@@ -60,11 +53,11 @@ self.view.addSubview(myNotif)
 ```
 
 #### Customizing
-You can change the defalut color of the text and background by calling `set(txtColor: UIColor?, bgColor: UIColor?)`
-(setting a parameter to `nil` leaves it the default color:
+You can change the defalut color of the text and background by calling `set(textColor: UIColor?, backgroundColor: UIColor?)`
+(removing a parameter leave the color set to the default):
 
 ```swift
-myNotif.set(txtColor: UIColor.red, bgColor: UIColor.darkGray)
+myNotif.set(textColor: UIColor.red, backgroundColor: UIColor.darkGray)
 ```
 
 #### Animating
