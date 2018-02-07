@@ -1,0 +1,13 @@
+language: objective-c
+sudo: required
+osx_image: xcode8.2
+# cache: cocoapods
+# podfile: Example/Podfile
+before_install:
+ - gem install cocoapods -v 1.1.1
+# - pod install --project-directory=Example
+script:
+- set -o pipefail && xcodebuild -verbose -workspace Example/DGNotifyView.xcworkspace -scheme DGNotifyView-Example -sdk iphonesimulator10.2 -destination 'id=BE8E0914-5B5F-45C2-8C99-879894AF72B0' clean build test | xcpretty -c
+- sleep 10
+- set -o pipefail && xcodebuild -verbose -workspace Example/DGNotifyView.xcworkspace -scheme DGNotifyView-Example -sdk iphonesimulator10.2 -destination 'id=BE8E0914-5B5F-45C2-8C99-879894AF72B0' test | xcpretty -tc
+- pod lib lint

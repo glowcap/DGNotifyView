@@ -1,0 +1,788 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		349BF30A3A2FACC05813546A3D7CA28E /* DGNotifyView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C66662BF6D077E41BF27ACBB4CF495B4 /* DGNotifyView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E475D7D371F04E1371B7D08BBB731EC /* Pods-DGNotifyView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58224B0E0BFDA1B3F1BE50F64668F3B2 /* Pods-DGNotifyView_Tests-dummy.m */; };
+		7060B3037275BBED2562B875FC17CE55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		830E31BC1E403C9400D2267A /* DGNotifyViewSpringy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E31BB1E403C9400D2267A /* DGNotifyViewSpringy.swift */; };
+		830E31BE1E403CEB00D2267A /* DGNotifyViewSpringyImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E31BD1E403CEB00D2267A /* DGNotifyViewSpringyImg.swift */; };
+		830E31C01E403D3600D2267A /* DGNotifyViewRoundedSpringy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E31BF1E403D3600D2267A /* DGNotifyViewRoundedSpringy.swift */; };
+		830E31C41E403D9800D2267A /* DGNotifyViewRoundedImgSpringy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830E31C31E403D9800D2267A /* DGNotifyViewRoundedImgSpringy.swift */; };
+		839F310D1E3585B500AF24F4 /* DGNotifyViewRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F310C1E3585B500AF24F4 /* DGNotifyViewRounded.swift */; };
+		839F310F1E35938A00AF24F4 /* DGNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F310E1E35938A00AF24F4 /* DGNotificationView.swift */; };
+		839F31111E360FE100AF24F4 /* DGNotifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F31101E360FE100AF24F4 /* DGNotifyView.swift */; };
+		839F31151E3634C600AF24F4 /* DGNotifyViewRoundedWithImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F31141E3634C600AF24F4 /* DGNotifyViewRoundedWithImg.swift */; };
+		839F31171E3639E600AF24F4 /* DGNotifyViewWithImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F31161E3639E600AF24F4 /* DGNotifyViewWithImg.swift */; };
+		96CAF1C681DBCD67C896AD3DFE0632FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		B30D535B0785E8A91B18E664E6A6AF50 /* Pods-DGNotifyView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7DCC0DD0AC89D148B559BF60C54519 /* Pods-DGNotifyView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5E7A4D9C9342816B11CD4BA4F0D9651 /* Pods-DGNotifyView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DF802A65D0473208ECCEDD5073FAAA /* Pods-DGNotifyView_Example-dummy.m */; };
+		D6F325F972097F4CF47872F7B44239B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		EBD1ABCBB71CF39292EEFF1C525D15A9 /* Pods-DGNotifyView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A6DA74F2E45A91483957D8D0E323454 /* Pods-DGNotifyView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F02236C16124543C2ED299158E394DFE /* DGNotifyView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 490490DDC96389095C15B154176AAB01 /* DGNotifyView-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		928F380DFEF5AA841E663108BF19142E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9082415B523137AD14CBFA7477EF5867;
+			remoteInfo = DGNotifyView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06DF802A65D0473208ECCEDD5073FAAA /* Pods-DGNotifyView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DGNotifyView_Example-dummy.m"; sourceTree = "<group>"; };
+		0A6DA74F2E45A91483957D8D0E323454 /* Pods-DGNotifyView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DGNotifyView_Tests-umbrella.h"; sourceTree = "<group>"; };
+		1914C82212A78555E960614545762266 /* Pods-DGNotifyView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DGNotifyView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		1DA51C256301255A0CE3201CD396FB2F /* DGNotifyView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGNotifyView-prefix.pch"; sourceTree = "<group>"; };
+		1EF7A71001E179FFB278DE142B892B11 /* Pods-DGNotifyView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DGNotifyView_Example-frameworks.sh"; sourceTree = "<group>"; };
+		2D5E71492982F71E42F6DE8EC0073196 /* Pods-DGNotifyView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DGNotifyView_Example.modulemap"; sourceTree = "<group>"; };
+		39D061D60B036777B725D5EF71477C41 /* Pods-DGNotifyView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DGNotifyView_Tests.modulemap"; sourceTree = "<group>"; };
+		490490DDC96389095C15B154176AAB01 /* DGNotifyView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGNotifyView-dummy.m"; sourceTree = "<group>"; };
+		511C8BF0F6F11928885E664B483602D3 /* Pods-DGNotifyView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DGNotifyView_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		58224B0E0BFDA1B3F1BE50F64668F3B2 /* Pods-DGNotifyView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DGNotifyView_Tests-dummy.m"; sourceTree = "<group>"; };
+		59577B319FD90FCA3145CF06B4B434ED /* Pods_DGNotifyView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DGNotifyView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E7DCC0DD0AC89D148B559BF60C54519 /* Pods-DGNotifyView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DGNotifyView_Example-umbrella.h"; sourceTree = "<group>"; };
+		6A03ADAD69A818FB4719CB210A230B1F /* Pods_DGNotifyView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DGNotifyView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DC48173E499F1C02FBB764F9A9F0820 /* DGNotifyView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGNotifyView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F503918A52FC7E6814E97203C2F82EE /* Pods-DGNotifyView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DGNotifyView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7683092E8624B7081C95670419FAA0CB /* Pods-DGNotifyView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DGNotifyView_Tests-resources.sh"; sourceTree = "<group>"; };
+		7E512CD5C293154EE6FB7A886E485A34 /* DGNotifyView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DGNotifyView.modulemap; sourceTree = "<group>"; };
+		8256E02756963633704B9F33A40BDDB5 /* DGNotifyView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DGNotifyView.xcconfig; sourceTree = "<group>"; };
+		830E31BB1E403C9400D2267A /* DGNotifyViewSpringy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyViewSpringy.swift; sourceTree = "<group>"; };
+		830E31BD1E403CEB00D2267A /* DGNotifyViewSpringyImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyViewSpringyImg.swift; sourceTree = "<group>"; };
+		830E31BF1E403D3600D2267A /* DGNotifyViewRoundedSpringy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyViewRoundedSpringy.swift; sourceTree = "<group>"; };
+		830E31C31E403D9800D2267A /* DGNotifyViewRoundedImgSpringy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyViewRoundedImgSpringy.swift; sourceTree = "<group>"; };
+		839F310C1E3585B500AF24F4 /* DGNotifyViewRounded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyViewRounded.swift; sourceTree = "<group>"; };
+		839F310E1E35938A00AF24F4 /* DGNotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotificationView.swift; sourceTree = "<group>"; };
+		839F31101E360FE100AF24F4 /* DGNotifyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyView.swift; sourceTree = "<group>"; };
+		839F31141E3634C600AF24F4 /* DGNotifyViewRoundedWithImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyViewRoundedWithImg.swift; sourceTree = "<group>"; };
+		839F31161E3639E600AF24F4 /* DGNotifyViewWithImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DGNotifyViewWithImg.swift; sourceTree = "<group>"; };
+		922916D5161A7B537D358C3D70C47A57 /* Pods-DGNotifyView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DGNotifyView_Example-resources.sh"; sourceTree = "<group>"; };
+		9385D17822C19110F7D5B7EA5C710C93 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A774E857C8B6EC900FD1273F952A054F /* Pods-DGNotifyView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DGNotifyView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B156D331FD7589EC697064951754197B /* Pods-DGNotifyView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DGNotifyView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B55BFC8BA18349772B5EA8149CCE33F6 /* Pods-DGNotifyView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DGNotifyView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C3A90D50A1B4541422DF24DFF4C99E83 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C66662BF6D077E41BF27ACBB4CF495B4 /* DGNotifyView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGNotifyView-umbrella.h"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D3845111AA9758AD1C06CCF0FD1B2786 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAD126B8A9203580ED51CE3FC0D2001A /* Pods-DGNotifyView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DGNotifyView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DAE652968B11C40D3FD9554234EEA4E7 /* Pods-DGNotifyView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DGNotifyView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F92379A676A46E13CF1629B65FCF2AB7 /* Pods-DGNotifyView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DGNotifyView_Tests-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1668EAB5B3FD2F73D40B75ECDCE93F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6F325F972097F4CF47872F7B44239B2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB65933E6ED2AEF381D529AD2F7F9537 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CAF1C681DBCD67C896AD3DFE0632FC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F11A3C2F91EEB9786DC406EB1D6E0ADC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7060B3037275BBED2562B875FC17CE55 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B1C61998E6C2BC706A08113CBB33CAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DC48173E499F1C02FBB764F9A9F0820 /* DGNotifyView.framework */,
+				6A03ADAD69A818FB4719CB210A230B1F /* Pods_DGNotifyView_Example.framework */,
+				59577B319FD90FCA3145CF06B4B434ED /* Pods_DGNotifyView_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0D9C1575F54AA1976C8E88F1D9C6900F /* Pods-DGNotifyView_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D3845111AA9758AD1C06CCF0FD1B2786 /* Info.plist */,
+				39D061D60B036777B725D5EF71477C41 /* Pods-DGNotifyView_Tests.modulemap */,
+				B55BFC8BA18349772B5EA8149CCE33F6 /* Pods-DGNotifyView_Tests-acknowledgements.markdown */,
+				6F503918A52FC7E6814E97203C2F82EE /* Pods-DGNotifyView_Tests-acknowledgements.plist */,
+				58224B0E0BFDA1B3F1BE50F64668F3B2 /* Pods-DGNotifyView_Tests-dummy.m */,
+				F92379A676A46E13CF1629B65FCF2AB7 /* Pods-DGNotifyView_Tests-frameworks.sh */,
+				7683092E8624B7081C95670419FAA0CB /* Pods-DGNotifyView_Tests-resources.sh */,
+				0A6DA74F2E45A91483957D8D0E323454 /* Pods-DGNotifyView_Tests-umbrella.h */,
+				DAE652968B11C40D3FD9554234EEA4E7 /* Pods-DGNotifyView_Tests.debug.xcconfig */,
+				511C8BF0F6F11928885E664B483602D3 /* Pods-DGNotifyView_Tests.release.xcconfig */,
+			);
+			name = "Pods-DGNotifyView_Tests";
+			path = "Target Support Files/Pods-DGNotifyView_Tests";
+			sourceTree = "<group>";
+		};
+		3A3B6356EE726C60D6DA9AEEF3A1C23B /* DGNotifyView */ = {
+			isa = PBXGroup;
+			children = (
+				DD8CA2CBD6D35453D3B5966203CE5CE7 /* DGNotifyView */,
+				5B3A226F4477EFB079B857D9DAA0C18C /* Support Files */,
+			);
+			name = DGNotifyView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5985ABC9E91C195667716F49F177AF0C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9672AD95544C639BE84ECE676222A144 /* Pods-DGNotifyView_Example */,
+				0D9C1575F54AA1976C8E88F1D9C6900F /* Pods-DGNotifyView_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5B3A226F4477EFB079B857D9DAA0C18C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E512CD5C293154EE6FB7A886E485A34 /* DGNotifyView.modulemap */,
+				8256E02756963633704B9F33A40BDDB5 /* DGNotifyView.xcconfig */,
+				490490DDC96389095C15B154176AAB01 /* DGNotifyView-dummy.m */,
+				1DA51C256301255A0CE3201CD396FB2F /* DGNotifyView-prefix.pch */,
+				C66662BF6D077E41BF27ACBB4CF495B4 /* DGNotifyView-umbrella.h */,
+				C3A90D50A1B4541422DF24DFF4C99E83 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/DGNotifyView";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				F95867CF1DC2E7CAD67CD39E3B035898 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				0B1C61998E6C2BC706A08113CBB33CAF /* Products */,
+				5985ABC9E91C195667716F49F177AF0C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		830E31C11E403D5C00D2267A /* Standard Views */ = {
+			isa = PBXGroup;
+			children = (
+				839F31101E360FE100AF24F4 /* DGNotifyView.swift */,
+				839F31161E3639E600AF24F4 /* DGNotifyViewWithImg.swift */,
+				830E31BB1E403C9400D2267A /* DGNotifyViewSpringy.swift */,
+				830E31BD1E403CEB00D2267A /* DGNotifyViewSpringyImg.swift */,
+			);
+			name = "Standard Views";
+			sourceTree = "<group>";
+		};
+		830E31C21E403D7900D2267A /* Rounded Views */ = {
+			isa = PBXGroup;
+			children = (
+				839F310C1E3585B500AF24F4 /* DGNotifyViewRounded.swift */,
+				839F31141E3634C600AF24F4 /* DGNotifyViewRoundedWithImg.swift */,
+				830E31BF1E403D3600D2267A /* DGNotifyViewRoundedSpringy.swift */,
+				830E31C31E403D9800D2267A /* DGNotifyViewRoundedImgSpringy.swift */,
+			);
+			name = "Rounded Views";
+			sourceTree = "<group>";
+		};
+		9672AD95544C639BE84ECE676222A144 /* Pods-DGNotifyView_Example */ = {
+			isa = PBXGroup;
+			children = (
+				9385D17822C19110F7D5B7EA5C710C93 /* Info.plist */,
+				2D5E71492982F71E42F6DE8EC0073196 /* Pods-DGNotifyView_Example.modulemap */,
+				A774E857C8B6EC900FD1273F952A054F /* Pods-DGNotifyView_Example-acknowledgements.markdown */,
+				1914C82212A78555E960614545762266 /* Pods-DGNotifyView_Example-acknowledgements.plist */,
+				06DF802A65D0473208ECCEDD5073FAAA /* Pods-DGNotifyView_Example-dummy.m */,
+				1EF7A71001E179FFB278DE142B892B11 /* Pods-DGNotifyView_Example-frameworks.sh */,
+				922916D5161A7B537D358C3D70C47A57 /* Pods-DGNotifyView_Example-resources.sh */,
+				5E7DCC0DD0AC89D148B559BF60C54519 /* Pods-DGNotifyView_Example-umbrella.h */,
+				DAD126B8A9203580ED51CE3FC0D2001A /* Pods-DGNotifyView_Example.debug.xcconfig */,
+				B156D331FD7589EC697064951754197B /* Pods-DGNotifyView_Example.release.xcconfig */,
+			);
+			name = "Pods-DGNotifyView_Example";
+			path = "Target Support Files/Pods-DGNotifyView_Example";
+			sourceTree = "<group>";
+		};
+		B6F8DFE04B55CA252CB6DCCB1F528AED /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				839F310E1E35938A00AF24F4 /* DGNotificationView.swift */,
+				830E31C21E403D7900D2267A /* Rounded Views */,
+				830E31C11E403D5C00D2267A /* Standard Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD8CA2CBD6D35453D3B5966203CE5CE7 /* DGNotifyView */ = {
+			isa = PBXGroup;
+			children = (
+				B6F8DFE04B55CA252CB6DCCB1F528AED /* Classes */,
+			);
+			path = DGNotifyView;
+			sourceTree = "<group>";
+		};
+		F95867CF1DC2E7CAD67CD39E3B035898 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A3B6356EE726C60D6DA9AEEF3A1C23B /* DGNotifyView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0BB4BA466C29A6B86B95E85074B3CD75 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B30D535B0785E8A91B18E664E6A6AF50 /* Pods-DGNotifyView_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69F3DA624BF6A440404C4724C0E500E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBD1ABCBB71CF39292EEFF1C525D15A9 /* Pods-DGNotifyView_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C360D0692A412CC2DB65446CD6034E08 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				349BF30A3A2FACC05813546A3D7CA28E /* DGNotifyView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5E7C1094FEB595EA5487E3BFF1AA464F /* Pods-DGNotifyView_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7470B2569D9A6E4F2F0CB73F7C5C3436 /* Build configuration list for PBXNativeTarget "Pods-DGNotifyView_Tests" */;
+			buildPhases = (
+				321D31DD6BF2263B2702F700965CDC5E /* Sources */,
+				F11A3C2F91EEB9786DC406EB1D6E0ADC /* Frameworks */,
+				69F3DA624BF6A440404C4724C0E500E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-DGNotifyView_Tests";
+			productName = "Pods-DGNotifyView_Tests";
+			productReference = 59577B319FD90FCA3145CF06B4B434ED /* Pods_DGNotifyView_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		682E66F70D14B68402E7E8A67FBE3051 /* Pods-DGNotifyView_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5DBBA1F9C47B2C0A2578D23E5DFD568 /* Build configuration list for PBXNativeTarget "Pods-DGNotifyView_Example" */;
+			buildPhases = (
+				2972A97BE7E11053F1E0F0D5096D7878 /* Sources */,
+				E1668EAB5B3FD2F73D40B75ECDCE93F4 /* Frameworks */,
+				0BB4BA466C29A6B86B95E85074B3CD75 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0494305C408953220DA1ADA5EB132F26 /* PBXTargetDependency */,
+			);
+			name = "Pods-DGNotifyView_Example";
+			productName = "Pods-DGNotifyView_Example";
+			productReference = 6A03ADAD69A818FB4719CB210A230B1F /* Pods_DGNotifyView_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9082415B523137AD14CBFA7477EF5867 /* DGNotifyView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7445EFAF210AACA95BF3A2FEB2E076B6 /* Build configuration list for PBXNativeTarget "DGNotifyView" */;
+			buildPhases = (
+				7CF30DBAE6CEC2FD08B1119E3D7FA645 /* Sources */,
+				EB65933E6ED2AEF381D529AD2F7F9537 /* Frameworks */,
+				C360D0692A412CC2DB65446CD6034E08 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DGNotifyView;
+			productName = DGNotifyView;
+			productReference = 6DC48173E499F1C02FBB764F9A9F0820 /* DGNotifyView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0820;
+				TargetAttributes = {
+					5E7C1094FEB595EA5487E3BFF1AA464F = {
+						DevelopmentTeam = NT4ZPH7Z6M;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					682E66F70D14B68402E7E8A67FBE3051 = {
+						DevelopmentTeam = NT4ZPH7Z6M;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					9082415B523137AD14CBFA7477EF5867 = {
+						DevelopmentTeam = NT4ZPH7Z6M;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 0B1C61998E6C2BC706A08113CBB33CAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9082415B523137AD14CBFA7477EF5867 /* DGNotifyView */,
+				682E66F70D14B68402E7E8A67FBE3051 /* Pods-DGNotifyView_Example */,
+				5E7C1094FEB595EA5487E3BFF1AA464F /* Pods-DGNotifyView_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2972A97BE7E11053F1E0F0D5096D7878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E7A4D9C9342816B11CD4BA4F0D9651 /* Pods-DGNotifyView_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		321D31DD6BF2263B2702F700965CDC5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E475D7D371F04E1371B7D08BBB731EC /* Pods-DGNotifyView_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CF30DBAE6CEC2FD08B1119E3D7FA645 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839F31111E360FE100AF24F4 /* DGNotifyView.swift in Sources */,
+				839F310F1E35938A00AF24F4 /* DGNotificationView.swift in Sources */,
+				F02236C16124543C2ED299158E394DFE /* DGNotifyView-dummy.m in Sources */,
+				839F310D1E3585B500AF24F4 /* DGNotifyViewRounded.swift in Sources */,
+				830E31C01E403D3600D2267A /* DGNotifyViewRoundedSpringy.swift in Sources */,
+				839F31151E3634C600AF24F4 /* DGNotifyViewRoundedWithImg.swift in Sources */,
+				839F31171E3639E600AF24F4 /* DGNotifyViewWithImg.swift in Sources */,
+				830E31BC1E403C9400D2267A /* DGNotifyViewSpringy.swift in Sources */,
+				830E31BE1E403CEB00D2267A /* DGNotifyViewSpringyImg.swift in Sources */,
+				830E31C41E403D9800D2267A /* DGNotifyViewRoundedImgSpringy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0494305C408953220DA1ADA5EB132F26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DGNotifyView;
+			target = 9082415B523137AD14CBFA7477EF5867 /* DGNotifyView */;
+			targetProxy = 928F380DFEF5AA841E663108BF19142E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		06D41EFD9507379D639F60BDC5CDA57C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAD126B8A9203580ED51CE3FC0D2001A /* Pods-DGNotifyView_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NT4ZPH7Z6M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DGNotifyView_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DGNotifyView_Example/Pods-DGNotifyView_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DGNotifyView_Example;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6E2527AC1B6FEA863EDC822009AD98D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8256E02756963633704B9F33A40BDDB5 /* DGNotifyView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NT4ZPH7Z6M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DGNotifyView/DGNotifyView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DGNotifyView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DGNotifyView/DGNotifyView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DGNotifyView;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		90BA12EA53B3525F0E2C87A3B08F20BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8256E02756963633704B9F33A40BDDB5 /* DGNotifyView.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NT4ZPH7Z6M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DGNotifyView/DGNotifyView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DGNotifyView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DGNotifyView/DGNotifyView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DGNotifyView;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		91F5B7E0665B46713200B8C784FD2439 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAE652968B11C40D3FD9554234EEA4E7 /* Pods-DGNotifyView_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NT4ZPH7Z6M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DGNotifyView_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DGNotifyView_Tests/Pods-DGNotifyView_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DGNotifyView_Tests;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		DFB776495AF77A1200036BB224A26DDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B156D331FD7589EC697064951754197B /* Pods-DGNotifyView_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NT4ZPH7Z6M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DGNotifyView_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DGNotifyView_Example/Pods-DGNotifyView_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DGNotifyView_Example;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EFD8BE101F9FCE05DE8641730B2AC36C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 511C8BF0F6F11928885E664B483602D3 /* Pods-DGNotifyView_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NT4ZPH7Z6M;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DGNotifyView_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DGNotifyView_Tests/Pods-DGNotifyView_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DGNotifyView_Tests;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */,
+				0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7445EFAF210AACA95BF3A2FEB2E076B6 /* Build configuration list for PBXNativeTarget "DGNotifyView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E2527AC1B6FEA863EDC822009AD98D3 /* Debug */,
+				90BA12EA53B3525F0E2C87A3B08F20BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7470B2569D9A6E4F2F0CB73F7C5C3436 /* Build configuration list for PBXNativeTarget "Pods-DGNotifyView_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91F5B7E0665B46713200B8C784FD2439 /* Debug */,
+				EFD8BE101F9FCE05DE8641730B2AC36C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5DBBA1F9C47B2C0A2578D23E5DFD568 /* Build configuration list for PBXNativeTarget "Pods-DGNotifyView_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06D41EFD9507379D639F60BDC5CDA57C /* Debug */,
+				DFB776495AF77A1200036BB224A26DDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
