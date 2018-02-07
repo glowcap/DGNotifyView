@@ -9,18 +9,18 @@
 import UIKit
 import DGNotifyView
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     // I'm calling the top-level class because this app is using
     // a variety of notifications for the demo. If you're
     // using a single type, just initiate that one ex: 'myNote: DGNotifyView!'
-    var notifyView: DGNotificationView!
+    private var notifyView: DGNotificationView!
     
     // This variable is put here because this app is
     // demoing all sides, you probably won't need to do this.
-    var side: DGNotificationView.Side!
+    private var side: DGNotificationView.Side!
     
-    var displaySeconds: Double! {
+    private var displaySeconds: Double! {
         didSet {
             secondLabel.text = String(displaySeconds)
         }
@@ -37,13 +37,13 @@ class ViewController: UIViewController {
     
     // This is only for the demo app
     // It's used in sendNotifTapped
-    var selectedDirection: Bool {
+    private var selectedDirection: Bool {
         guard topSegment != nil || bottomSegment != nil else { return false }
         guard topSegment.selectedSegmentIndex >= 0 || bottomSegment.selectedSegmentIndex >= 0 else { return false }
         return true
     }
     
-    var isSpringy: Bool {
+    private var isSpringy: Bool {
         guard animationSeg != nil else { return false }
         return animationSeg.selectedSegmentIndex == 1
     }
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     }
     
     
-    func toggleSeg(selected: UISegmentedControl) {
+    private func toggleSeg(selected: UISegmentedControl) {
         guard topSegment != nil , bottomSegment != nil else { return }
         let off = -1
         if selected == topSegment {
@@ -69,13 +69,6 @@ class ViewController: UIViewController {
             topSegment.selectedSegmentIndex = off
         }
     }
-
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     // Here the instance of DGNotificationView is being recycled
     // so I'm wiping out the exisiting one
@@ -95,7 +88,7 @@ class ViewController: UIViewController {
     // ********
     // The way notifyView is being called is a bit strange
     // since I'm demoing every type of DGNotifyView presented from
-    // every location. I don't recommend doing this. lol.
+    // every location. I don't recommend doing it this way.
     // Here's an example of how yours might look:
     //
     //    func showNote() {

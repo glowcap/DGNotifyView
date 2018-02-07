@@ -11,6 +11,7 @@
 		2BAC1CC58297537DE1B6CBD7AB148657 /* Pods-DGNotifyView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DF802A65D0473208ECCEDD5073FAAA /* Pods-DGNotifyView_Example-dummy.m */; };
 		422728B5F52EA03DF8DEDB6155DCE5C5 /* DGNotifyViewRoundedSpringy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F728ACDC181DA783970866EF5AECE6F /* DGNotifyViewRoundedSpringy.swift */; };
 		4AC5398F5ACEB33341F7CE591B80DF6A /* DGNotifyViewRoundedWithImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5AB22D027D28387F8E76831174610F /* DGNotifyViewRoundedWithImg.swift */; };
+		4AE6CBCE202A98C00058455C /* DGHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE6CBCD202A98C00058455C /* DGHelper.swift */; };
 		503AB1FD61BD18C556EED4BD8D65758A /* DGNotifyView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B44BAB66A0CDFEA67580424337076D84 /* DGNotifyView-dummy.m */; };
 		50EDFB9C925C6C5AAFBC92F709EB7602 /* DGNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6103EDEE26EB3987CB7B4FCDA1226 /* DGNotificationView.swift */; };
 		7C7A48754D67880565CB102B530CF7AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
@@ -47,6 +48,7 @@
 		1EF7A71001E179FFB278DE142B892B11 /* Pods-DGNotifyView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DGNotifyView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		2D5E71492982F71E42F6DE8EC0073196 /* Pods-DGNotifyView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DGNotifyView_Example.modulemap"; sourceTree = "<group>"; };
 		39D061D60B036777B725D5EF71477C41 /* Pods-DGNotifyView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DGNotifyView_Tests.modulemap"; sourceTree = "<group>"; };
+		4AE6CBCD202A98C00058455C /* DGHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGHelper.swift; sourceTree = "<group>"; };
 		4BC8CB65FE0CBB437F241E7608CA300C /* DGNotifyView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGNotifyView-prefix.pch"; sourceTree = "<group>"; };
 		4D9AC38FA00DDC8FD6EAC2993F5FC74B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F728ACDC181DA783970866EF5AECE6F /* DGNotifyViewRoundedSpringy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGNotifyViewRoundedSpringy.swift; path = DGNotifyView/Classes/DGNotifyViewRoundedSpringy.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				A6C7949137B6F1A35BDB9FFFF1B3B1AC /* DGNotifyViewSpringy.swift */,
 				F0C60F1C7847E27AD0A926D4695BE54A /* DGNotifyViewSpringyImg.swift */,
 				6868A5B09ED8C3AE654135ED7ADFB57B /* DGNotifyViewWithImg.swift */,
+				4AE6CBCD202A98C00058455C /* DGHelper.swift */,
 				15B76C2E160DE2FFF28B06147A12BF70 /* Support Files */,
 			);
 			name = DGNotifyView;
@@ -326,7 +329,9 @@
 				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					E1E422E057B14B8F235767110D018255 = {
+						DevelopmentTeam = NT4ZPH7Z6M;
 						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -372,6 +377,7 @@
 			files = (
 				50EDFB9C925C6C5AAFBC92F709EB7602 /* DGNotificationView.swift in Sources */,
 				503AB1FD61BD18C556EED4BD8D65758A /* DGNotifyView-dummy.m in Sources */,
+				4AE6CBCE202A98C00058455C /* DGHelper.swift in Sources */,
 				B09B3C01406541A9849F05197119FD76 /* DGNotifyView.swift in Sources */,
 				B5B3D7316D495FFF41F23DE59DC167EB /* DGNotifyViewRounded.swift in Sources */,
 				E2199D502B576C120C7E2B31DC3186F4 /* DGNotifyViewRoundedImgSpringy.swift in Sources */,
@@ -401,10 +407,12 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NT4ZPH7Z6M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -415,11 +423,12 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DGNotifyView/DGNotifyView.modulemap";
 				PRODUCT_NAME = DGNotifyView;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -589,10 +598,12 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NT4ZPH7Z6M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -603,11 +614,12 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DGNotifyView/DGNotifyView.modulemap";
 				PRODUCT_NAME = DGNotifyView;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
