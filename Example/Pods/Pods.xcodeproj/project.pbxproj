@@ -9,24 +9,16 @@
 /* Begin PBXBuildFile section */
 		061398678A53409964F7471A4084F127 /* Pods-DGNotifyView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A6DA74F2E45A91483957D8D0E323454 /* Pods-DGNotifyView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BAC1CC58297537DE1B6CBD7AB148657 /* Pods-DGNotifyView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DF802A65D0473208ECCEDD5073FAAA /* Pods-DGNotifyView_Example-dummy.m */; };
-		422728B5F52EA03DF8DEDB6155DCE5C5 /* DGNotifyViewRoundedSpringy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F728ACDC181DA783970866EF5AECE6F /* DGNotifyViewRoundedSpringy.swift */; };
-		4AC5398F5ACEB33341F7CE591B80DF6A /* DGNotifyViewRoundedWithImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5AB22D027D28387F8E76831174610F /* DGNotifyViewRoundedWithImg.swift */; };
 		4AE6CBD0202AA4960058455C /* DGHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE6CBCF202AA4960058455C /* DGHelper.swift */; };
 		503AB1FD61BD18C556EED4BD8D65758A /* DGNotifyView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B44BAB66A0CDFEA67580424337076D84 /* DGNotifyView-dummy.m */; };
 		50EDFB9C925C6C5AAFBC92F709EB7602 /* DGNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6103EDEE26EB3987CB7B4FCDA1226 /* DGNotificationView.swift */; };
 		7C7A48754D67880565CB102B530CF7AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		7F362AD5BB2126C9051536C75D17221E /* DGNotifyView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A32B55E0CFA2C9BC612FE8168123CA46 /* DGNotifyView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B09B3C01406541A9849F05197119FD76 /* DGNotifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86E814568304376CF0043C6D14B1406 /* DGNotifyView.swift */; };
 		B1D0E2E2D703AE97D0BAF452C6D4CDCF /* Pods-DGNotifyView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58224B0E0BFDA1B3F1BE50F64668F3B2 /* Pods-DGNotifyView_Tests-dummy.m */; };
-		B5B3D7316D495FFF41F23DE59DC167EB /* DGNotifyViewRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18028FF3B79D4A40E09BCBD74EC8C408 /* DGNotifyViewRounded.swift */; };
 		B847BD0744052DBED1FB2C8B61EDA84B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
 		C3D7654B78B3E7322421F865A9B85CE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		C8B543952426878776DF7384B4D6BFCF /* Pods-DGNotifyView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7DCC0DD0AC89D148B559BF60C54519 /* Pods-DGNotifyView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEA6F656D61E4E87E514B71C4854E6CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		DA3D8C44AE9308C2A2D13C34B2B3B319 /* DGNotifyViewWithImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6868A5B09ED8C3AE654135ED7ADFB57B /* DGNotifyViewWithImg.swift */; };
-		E2199D502B576C120C7E2B31DC3186F4 /* DGNotifyViewRoundedImgSpringy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F33A70A37392BE122DB1F263BD130A /* DGNotifyViewRoundedImgSpringy.swift */; };
-		E61606FDEB2FBAA2BD5EE09C1CF06968 /* DGNotifyViewSpringyImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C60F1C7847E27AD0A926D4695BE54A /* DGNotifyViewSpringyImg.swift */; };
-		FC5F2C988811C6E991A1F48DE924BADB /* DGNotifyViewSpringy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C7949137B6F1A35BDB9FFFF1B3B1AC /* DGNotifyViewSpringy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +35,6 @@
 		06DF802A65D0473208ECCEDD5073FAAA /* Pods-DGNotifyView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DGNotifyView_Example-dummy.m"; sourceTree = "<group>"; };
 		0A6DA74F2E45A91483957D8D0E323454 /* Pods-DGNotifyView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DGNotifyView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		12322EDF5524C6AD4E700E68C74E6509 /* DGNotifyView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DGNotifyView.modulemap; sourceTree = "<group>"; };
-		18028FF3B79D4A40E09BCBD74EC8C408 /* DGNotifyViewRounded.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGNotifyViewRounded.swift; path = DGNotifyView/Classes/DGNotifyViewRounded.swift; sourceTree = "<group>"; };
 		1914C82212A78555E960614545762266 /* Pods-DGNotifyView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DGNotifyView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		1EF7A71001E179FFB278DE142B892B11 /* Pods-DGNotifyView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DGNotifyView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		2D5E71492982F71E42F6DE8EC0073196 /* Pods-DGNotifyView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DGNotifyView_Example.modulemap"; sourceTree = "<group>"; };
@@ -51,12 +42,10 @@
 		4AE6CBCF202AA4960058455C /* DGHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DGHelper.swift; path = DGNotifyView/Classes/DGHelper.swift; sourceTree = "<group>"; };
 		4BC8CB65FE0CBB437F241E7608CA300C /* DGNotifyView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGNotifyView-prefix.pch"; sourceTree = "<group>"; };
 		4D9AC38FA00DDC8FD6EAC2993F5FC74B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F728ACDC181DA783970866EF5AECE6F /* DGNotifyViewRoundedSpringy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGNotifyViewRoundedSpringy.swift; path = DGNotifyView/Classes/DGNotifyViewRoundedSpringy.swift; sourceTree = "<group>"; };
 		511C8BF0F6F11928885E664B483602D3 /* Pods-DGNotifyView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DGNotifyView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		58224B0E0BFDA1B3F1BE50F64668F3B2 /* Pods-DGNotifyView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DGNotifyView_Tests-dummy.m"; sourceTree = "<group>"; };
 		59577B319FD90FCA3145CF06B4B434ED /* Pods_DGNotifyView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DGNotifyView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7DCC0DD0AC89D148B559BF60C54519 /* Pods-DGNotifyView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DGNotifyView_Example-umbrella.h"; sourceTree = "<group>"; };
-		6868A5B09ED8C3AE654135ED7ADFB57B /* DGNotifyViewWithImg.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGNotifyViewWithImg.swift; path = DGNotifyView/Classes/DGNotifyViewWithImg.swift; sourceTree = "<group>"; };
 		6A03ADAD69A818FB4719CB210A230B1F /* Pods_DGNotifyView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DGNotifyView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC48173E499F1C02FBB764F9A9F0820 /* DGNotifyView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DGNotifyView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F503918A52FC7E6814E97203C2F82EE /* Pods-DGNotifyView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DGNotifyView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -65,20 +54,15 @@
 		9385D17822C19110F7D5B7EA5C710C93 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A32B55E0CFA2C9BC612FE8168123CA46 /* DGNotifyView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGNotifyView-umbrella.h"; sourceTree = "<group>"; };
-		A6C7949137B6F1A35BDB9FFFF1B3B1AC /* DGNotifyViewSpringy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGNotifyViewSpringy.swift; path = DGNotifyView/Classes/DGNotifyViewSpringy.swift; sourceTree = "<group>"; };
 		A774E857C8B6EC900FD1273F952A054F /* Pods-DGNotifyView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DGNotifyView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A86E814568304376CF0043C6D14B1406 /* DGNotifyView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGNotifyView.swift; path = DGNotifyView/Classes/DGNotifyView.swift; sourceTree = "<group>"; };
-		AE5AB22D027D28387F8E76831174610F /* DGNotifyViewRoundedWithImg.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGNotifyViewRoundedWithImg.swift; path = DGNotifyView/Classes/DGNotifyViewRoundedWithImg.swift; sourceTree = "<group>"; };
 		B156D331FD7589EC697064951754197B /* Pods-DGNotifyView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DGNotifyView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B44BAB66A0CDFEA67580424337076D84 /* DGNotifyView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGNotifyView-dummy.m"; sourceTree = "<group>"; };
 		B55BFC8BA18349772B5EA8149CCE33F6 /* Pods-DGNotifyView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DGNotifyView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D3845111AA9758AD1C06CCF0FD1B2786 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3F33A70A37392BE122DB1F263BD130A /* DGNotifyViewRoundedImgSpringy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGNotifyViewRoundedImgSpringy.swift; path = DGNotifyView/Classes/DGNotifyViewRoundedImgSpringy.swift; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DAD126B8A9203580ED51CE3FC0D2001A /* Pods-DGNotifyView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DGNotifyView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DAE652968B11C40D3FD9554234EEA4E7 /* Pods-DGNotifyView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DGNotifyView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F0C60F1C7847E27AD0A926D4695BE54A /* DGNotifyViewSpringyImg.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGNotifyViewSpringyImg.swift; path = DGNotifyView/Classes/DGNotifyViewSpringyImg.swift; sourceTree = "<group>"; };
 		F2D6103EDEE26EB3987CB7B4FCDA1226 /* DGNotificationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGNotificationView.swift; path = DGNotifyView/Classes/DGNotificationView.swift; sourceTree = "<group>"; };
 		F92379A676A46E13CF1629B65FCF2AB7 /* Pods-DGNotifyView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DGNotifyView_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		FF7E30ACBAC61F2310D6356240CB85AB /* DGNotifyView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DGNotifyView.xcconfig; sourceTree = "<group>"; };
@@ -222,14 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				F2D6103EDEE26EB3987CB7B4FCDA1226 /* DGNotificationView.swift */,
-				A86E814568304376CF0043C6D14B1406 /* DGNotifyView.swift */,
-				18028FF3B79D4A40E09BCBD74EC8C408 /* DGNotifyViewRounded.swift */,
-				D3F33A70A37392BE122DB1F263BD130A /* DGNotifyViewRoundedImgSpringy.swift */,
-				4F728ACDC181DA783970866EF5AECE6F /* DGNotifyViewRoundedSpringy.swift */,
-				AE5AB22D027D28387F8E76831174610F /* DGNotifyViewRoundedWithImg.swift */,
-				A6C7949137B6F1A35BDB9FFFF1B3B1AC /* DGNotifyViewSpringy.swift */,
-				F0C60F1C7847E27AD0A926D4695BE54A /* DGNotifyViewSpringyImg.swift */,
-				6868A5B09ED8C3AE654135ED7ADFB57B /* DGNotifyViewWithImg.swift */,
 				4AE6CBCF202AA4960058455C /* DGHelper.swift */,
 				15B76C2E160DE2FFF28B06147A12BF70 /* Support Files */,
 			);
@@ -377,15 +353,7 @@
 			files = (
 				50EDFB9C925C6C5AAFBC92F709EB7602 /* DGNotificationView.swift in Sources */,
 				503AB1FD61BD18C556EED4BD8D65758A /* DGNotifyView-dummy.m in Sources */,
-				B09B3C01406541A9849F05197119FD76 /* DGNotifyView.swift in Sources */,
 				4AE6CBD0202AA4960058455C /* DGHelper.swift in Sources */,
-				B5B3D7316D495FFF41F23DE59DC167EB /* DGNotifyViewRounded.swift in Sources */,
-				E2199D502B576C120C7E2B31DC3186F4 /* DGNotifyViewRoundedImgSpringy.swift in Sources */,
-				422728B5F52EA03DF8DEDB6155DCE5C5 /* DGNotifyViewRoundedSpringy.swift in Sources */,
-				4AC5398F5ACEB33341F7CE591B80DF6A /* DGNotifyViewRoundedWithImg.swift in Sources */,
-				FC5F2C988811C6E991A1F48DE924BADB /* DGNotifyViewSpringy.swift in Sources */,
-				E61606FDEB2FBAA2BD5EE09C1CF06968 /* DGNotifyViewSpringyImg.swift in Sources */,
-				DA3D8C44AE9308C2A2D13C34B2B3B319 /* DGNotifyViewWithImg.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
