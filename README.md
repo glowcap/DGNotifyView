@@ -1,6 +1,6 @@
 # DGNotifyView
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d7a02042cd26417fb234086cb723a2d0)](https://www.codacy.com/app/daymeing/DGNotifyView?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=glowcap/DGNotifyView&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f815aa4a8c734a938260d6e56f88b455)](https://www.codacy.com/app/glowcap/DGNotifyView?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=glowcap/DGNotifyView&amp;utm_campaign=Badge_Grade)
 [![Swift](https://img.shields.io/badge/%20compatible-swift%203.0-orange.svg)](http://swift.org)
 [![Version](https://img.shields.io/cocoapods/v/DGNotifyView.svg?style=flat)](http://cocoapods.org/pods/DGNotifyView)
 [![License](https://img.shields.io/cocoapods/l/DGNotifyView.svg?style=flat)](http://cocoapods.org/pods/DGNotifyView)
@@ -96,7 +96,7 @@ If your interested in contributing:
 
 ## Author
 
-glowcap, [@DaymeinG](https://twitter.com/DaymeinG)
+Daymein Gregorio, [@DaymeinG](https://twitter.com/DaymeinG)
 
 ## License
 
