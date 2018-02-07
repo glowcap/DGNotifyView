@@ -106,14 +106,11 @@ public class DGNotificationView: UIView {
     private var imageView: UIImageView!
 
 //MARK: Layout variables
-    private let vHeight:CGFloat = 68.0
-    private let shadowMargin:CGFloat = 4.0
+    private let vHeight = CGFloat(68.0)
+    private let shadowMargin = CGFloat(4.0)
     private var xPadding: CGFloat!
-    private let topCarrierMargin:CGFloat = UIDevice()
-                .type == DGDeviceModel.iPhoneX ? 40 : 20
-    private lazy var bottomCarrierMargin: CGFloat = UIDevice()
-                     .type == DGDeviceModel.iPhoneX ? screenHeight - 40 : screenHeight
-    
+    private let topCarrierMargin = CGFloat(UIDevice().type == DGDeviceModel.iPhoneX ? 40 : 20)
+  
 //MARK: Color variables
     private var textColor = UIColor.darkText {
         didSet {
@@ -205,16 +202,16 @@ public class DGNotificationView: UIView {
         }
         
         titleLabel.textAlignment = .left
+        titleLabel.text          = title
+        titleLabel.textColor     = textColor
         titleLabel.adjustsFontSizeToFitWidth = true
-        titleLabel.text = title
-        titleLabel.textColor = textColor
         titleLabel.font = UIFont(name: titleLabel.font.fontName, size: 16)
         addSubview(titleLabel)
         
         messageLabel.textAlignment = .left
         messageLabel.numberOfLines = 3
         messageLabel.lineBreakMode = .byTruncatingTail
-        messageLabel.text = message
+        messageLabel.text      = message
         messageLabel.textColor = textColor
         messageLabel.font = UIFont(name: messageLabel.font.fontName, size: 12)
         addSubview(messageLabel)
@@ -222,11 +219,11 @@ public class DGNotificationView: UIView {
     
     
     private func addShadow() {
-        layer.cornerRadius  = cornerRadius
-        layer.shadowColor   = UIColor.black.cgColor
-        layer.shadowOffset  = CGSize.zero
-        layer.shadowRadius  = 5.0
-        layer.shadowOpacity = 0.5
+        layer.cornerRadius    = cornerRadius
+        layer.shadowColor     = UIColor.black.cgColor
+        layer.shadowOffset    = CGSize.zero
+        layer.shadowRadius    = 5.0
+        layer.shadowOpacity   = 0.5
         super.backgroundColor = UIColor.clear
     }
     
@@ -242,6 +239,7 @@ public class DGNotificationView: UIView {
         let frame: CGRect
         let width = fullWidth ? screenWidth : (screenWidth - 40.0)
         xPadding = fullWidth ? 0.0 : 20.0
+        let bottomCarrierMargin = UIDevice().type == DGDeviceModel.iPhoneX ? (screenHeight - 40) : screenHeight
       
         switch side {
         case .topLeft:
@@ -298,6 +296,7 @@ public class DGNotificationView: UIView {
         let yToPosition2: CGFloat
         let xToPosition1: CGFloat
         let xToPosition2: CGFloat
+        let bottomCarrierMargin = UIDevice().type == DGDeviceModel.iPhoneX ? (screenHeight - 40) : screenHeight
         
         switch s {
         case .top:
