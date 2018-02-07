@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9082415B523137AD14CBFA7477EF5867"
+               BlueprintIdentifier = "E1E422E057B14B8F235767110D018255"
                BuildableName = "DGNotifyView.framework"
                BlueprintName = "DGNotifyView"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">

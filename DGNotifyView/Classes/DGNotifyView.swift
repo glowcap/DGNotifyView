@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-/// This is the base class for DGNotifyView and shouldn't need to be called in most situations
-public final class DGNotificationView: UIView {
+/// This is the base class for DGNotifyView
+public final class DGNotifyView: UIView {
   
   /// Determines where the view will appear from and go to.
   /// Top and bottom values will go to the top or bottom, respectively
@@ -102,12 +102,6 @@ public final class DGNotificationView: UIView {
     }
   }
   
-  private var bgColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1) {
-    didSet {
-      backgroundColor = bgColor
-    }
-  }
-  
 //MARK: - Init function
   
   /// Base init function for all DGNotifyViews. Call with the parameters
@@ -140,7 +134,7 @@ public final class DGNotificationView: UIView {
     
     configureContents()
     addShadow()
-    backgroundColor = bgColor
+    backgroundColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
   }
   
   required public init?(coder aDecoder: NSCoder) {
@@ -254,11 +248,10 @@ public final class DGNotificationView: UIView {
   ///
   /// - Parameters:
   ///   - txtColor: UIColor for all in view text (optional)
-  ///   - bgColor: UIColor for view background (optional)
-  public func set(txtColor: UIColor?, bgColor: UIColor?) {
-    if txtColor != nil { textColor = txtColor! }
-    guard bgColor != nil else { return }
-    backgroundColor = bgColor
+  ///   - bgColor: UIColor for view background
+  public func set(textColor: UIColor = .darkText, backgroundColor: UIColor = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)) {
+    self.textColor = textColor
+    self.backgroundColor = backgroundColor
   }
   
 //MARK: - Animation functions

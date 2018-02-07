@@ -11,11 +11,11 @@ import DGNotifyView
 
 final class ViewController: UIViewController {
 
-  private var notifyView: DGNotificationView!
+  private var notifyView: DGNotifyView!
   
   /// This variable is put here because this app is demoing
   /// all directions, you probably won't need to do this.
-  private var direction: DGNotificationView.Direction!
+  private var direction: DGNotifyView.Direction!
   
   private var displaySeconds: Double! {
     didSet {
@@ -90,47 +90,47 @@ final class ViewController: UIViewController {
     
     if roundCorners {
       if hasImage && isSpringy {
-        notifyView = DGNotificationView(title: noteTitle, message: noteMessage,
-                                        direction: direction, fullWidth: fullWidth,
-                                        cornerRadius: cr, image: img,
-                                        useSprings: true)
+        notifyView = DGNotifyView(title: noteTitle, message: noteMessage,
+                                  direction: direction, fullWidth: fullWidth,
+                                  cornerRadius: cr, image: img,
+                                  useSprings: true)
         return
       } else if hasImage {
-        notifyView = DGNotificationView(title: noteTitle, message: noteMessage,
-                                        direction: direction, fullWidth: fullWidth,
-                                        cornerRadius: cr, image: img)
+        notifyView = DGNotifyView(title: noteTitle, message: noteMessage,
+                                  direction: direction, fullWidth: fullWidth,
+                                  cornerRadius: cr, image: img)
         return
       } else if !hasImage && isSpringy {
-        notifyView = DGNotificationView(title: noteTitle, message: noteMessage,
-                                        direction: direction, fullWidth: fullWidth,
-                                        cornerRadius: cr, useSprings: true)
+        notifyView = DGNotifyView(title: noteTitle, message: noteMessage,
+                                  direction: direction, fullWidth: fullWidth,
+                                  cornerRadius: cr, useSprings: true)
         return
       } else {
-        notifyView = DGNotificationView(title: noteTitle, message: noteMessage,
-                                        direction: direction, fullWidth: fullWidth,
-                                        cornerRadius: cr)
+        notifyView = DGNotifyView(title: noteTitle, message: noteMessage,
+                                  direction: direction, fullWidth: fullWidth,
+                                  cornerRadius: cr)
         return
       }
       
     } else {
       if hasImage && isSpringy {
-        notifyView = DGNotificationView(title: noteTitle, message: noteMessage,
-                                        direction: direction, fullWidth: fullWidth,
-                                        image: img, useSprings: true)
+        notifyView = DGNotifyView(title: noteTitle, message: noteMessage,
+                                  direction: direction, fullWidth: fullWidth,
+                                  image: img, useSprings: true)
         return
       } else if hasImage {
-        notifyView = DGNotificationView(title: noteTitle, message: noteMessage,
-                                        direction: direction, fullWidth: fullWidth,
-                                        image: img)
+        notifyView = DGNotifyView(title: noteTitle, message: noteMessage,
+                                  direction: direction, fullWidth: fullWidth,
+                                  image: img)
         return
       } else if !hasImage && isSpringy {
-        notifyView = DGNotificationView(title: noteTitle, message: noteMessage,
-                                        direction: direction, fullWidth: fullWidth,
-                                        useSprings: true)
+        notifyView = DGNotifyView(title: noteTitle, message: noteMessage,
+                                  direction: direction, fullWidth: fullWidth,
+                                  useSprings: true)
         return
       } else {
-        notifyView = DGNotificationView(title: noteTitle, message: noteMessage,
-                                        direction: direction, fullWidth: fullWidth)
+        notifyView = DGNotifyView(title: noteTitle, message: noteMessage,
+                                  direction: direction, fullWidth: fullWidth)
         return
       }
     }
@@ -161,6 +161,7 @@ final class ViewController: UIViewController {
   
   @IBAction func sendNotifTapped(_ sender: UIButton) {
     guard selectedDirection else { return }
+    sender.isEnabled = false
     createNotification()
     view.addSubview(notifyView)
     notifyView.displayFor(seconds: displaySeconds!) { (finished) in
