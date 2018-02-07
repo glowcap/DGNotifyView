@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DGNotifyView'
-  s.version          = '0.1.2.2'
+  s.version          = '0.1.5'
   s.summary          = 'Animated view for internal app notifications'
 
 # This description is used to generate tags and improve search results.

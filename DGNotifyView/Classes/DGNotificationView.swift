@@ -31,8 +31,8 @@ public class DGNotificationView: UIView {
         case bottom
     }
     
-    static let dgScreenWidth = UIScreen.main.bounds.width
-    static let dgScreenHeight = UIScreen.main.bounds.height
+    private let screenWidth = UIScreen.main.bounds.width
+    private let screenHeight = UIScreen.main.bounds.height
 
 //MARK: - Private variables
     private var _displayTime: Double!
@@ -108,8 +108,11 @@ public class DGNotificationView: UIView {
 //MARK: Layout variables
     private let vHeight:CGFloat = 68.0
     private let shadowMargin:CGFloat = 4.0
-    private let topCarrierMargin:CGFloat = 20.0
     private var xPadding: CGFloat!
+    private let topCarrierMargin:CGFloat = UIDevice()
+                .type == DGDeviceModel.iPhoneX ? 40 : 20
+    private lazy var bottomCarrierMargin: CGFloat = UIDevice()
+                     .type == DGDeviceModel.iPhoneX ? screenHeight - 40 : screenHeight
     
 //MARK: Color variables
     private var textColor = UIColor.darkText {
@@ -237,25 +240,25 @@ public class DGNotificationView: UIView {
     /// - Returns: the starting postion of the notification
     private func setStartFrom(side: Side, fullWidth: Bool) -> CGRect {
         let frame: CGRect
-        let width = fullWidth ? DGNotificationView.dgScreenWidth : (DGNotificationView.dgScreenWidth - 40.0)
+        let width = fullWidth ? screenWidth : (screenWidth - 40.0)
         xPadding = fullWidth ? 0.0 : 20.0
-        
+      
         switch side {
         case .topLeft:
-            frame = CGRect(x: -DGNotificationView.dgScreenWidth + xPadding,
+            frame = CGRect(x: -screenWidth + xPadding,
                            y: shadowMargin + topCarrierMargin,
                            width: width, height: vHeight)
         case .topRight:
-            frame = CGRect(x: DGNotificationView.dgScreenWidth + xPadding,
+            frame = CGRect(x: screenWidth + xPadding,
                            y: shadowMargin + topCarrierMargin,
                            width: width, height: vHeight)
         case .bottomLeft:
-            frame = CGRect(x: -DGNotificationView.dgScreenWidth + xPadding,
-                           y: DGNotificationView.dgScreenHeight - vHeight - shadowMargin,
+            frame = CGRect(x: -screenWidth + xPadding,
+                           y: bottomCarrierMargin - vHeight - shadowMargin,
                            width: width, height: vHeight)
         case .bottomRight:
-            frame = CGRect(x: DGNotificationView.dgScreenWidth + xPadding,
-                           y: DGNotificationView.dgScreenHeight - vHeight - shadowMargin,
+            frame = CGRect(x: screenWidth + xPadding,
+                           y: bottomCarrierMargin - vHeight - shadowMargin,
                            width: width, height: vHeight)
         case .top:
             frame = CGRect(x: xPadding,
@@ -263,7 +266,7 @@ public class DGNotificationView: UIView {
                            width: width, height: vHeight)
         case .bottom:
             frame = CGRect(x: xPadding,
-                           y: DGNotificationView.dgScreenHeight + shadowMargin,
+                           y: screenHeight + shadowMargin,
                            width: width, height: vHeight)
             
         }
@@ -305,18 +308,18 @@ public class DGNotificationView: UIView {
         case .topRight, .bottomRight:
             yToPosition1 = center.y
             yToPosition2 = center.y
-            xToPosition1 = DGNotificationView.dgScreenWidth / 2
-            xToPosition2 = DGNotificationView.dgScreenWidth * 1.5 + xPadding
+            xToPosition1 = screenWidth / 2
+            xToPosition2 = screenWidth * 1.5 + xPadding
         case .bottom:
-            yToPosition1 = DGNotificationView.dgScreenHeight - vHeight / 2 - shadowMargin
-            yToPosition2 = DGNotificationView.dgScreenHeight + vHeight / 2 + shadowMargin
+            yToPosition1 = bottomCarrierMargin - vHeight / 2 - shadowMargin
+            yToPosition2 = screenHeight + vHeight / 2 + shadowMargin
             xToPosition1 = center.x
             xToPosition2 = xToPosition1
         case .topLeft, .bottomLeft:
             yToPosition1 = center.y
             yToPosition2 = center.y
-            xToPosition1 = DGNotificationView.dgScreenWidth / 2
-            xToPosition2 = -DGNotificationView.dgScreenWidth / 1.5 + -xPadding
+            xToPosition1 = screenWidth / 2
+            xToPosition2 = -screenWidth / 1.5 + -xPadding
         }
         
         if useSprings {
