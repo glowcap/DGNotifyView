@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 public enum DGDeviceModel : String {
   case simulator   = "simulator/sandbox",
   iPod1            = "iPod 1",
