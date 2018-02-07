@@ -96,7 +96,7 @@ If your interested in contributing:
 
 ## Author
 
-glowcap, [@DaymeinG](https://twitter.com/DaymeinG)
+Daymein Gregorio, [@DaymeinG](https://twitter.com/DaymeinG)
 
 ## License
 
