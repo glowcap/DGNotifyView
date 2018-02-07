@@ -24,7 +24,7 @@ public class DemoImage : NSObject {
 
     // Drawing Methods
 
-    public dynamic class func drawDemo(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 200, height: 200), resizing: ResizingBehavior = .aspectFit) {
+    @objc public dynamic class func drawDemo(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 200, height: 200), resizing: ResizingBehavior = .aspectFit) {
         // General Declarations
         let context = UIGraphicsGetCurrentContext()!
         
@@ -51,7 +51,7 @@ public class DemoImage : NSObject {
         let label3Rect = CGRect(x: 7.63, y: 153, width: 184.52, height: 56)
         let label3Style = NSMutableParagraphStyle()
         label3Style.alignment = .left
-        let label3FontAttributes = [NSFontAttributeName: UIFont(name: "AvenirNext-Bold", size: 34)!, NSForegroundColorAttributeName: textForeground2, NSParagraphStyleAttributeName: label3Style]
+        let label3FontAttributes = [NSAttributedStringKey.font: UIFont(name: "AvenirNext-Bold", size: 34)!, NSAttributedStringKey.foregroundColor: textForeground2, NSAttributedStringKey.paragraphStyle: label3Style]
 
         "notify view".draw(in: label3Rect, withAttributes: label3FontAttributes)
 
@@ -60,7 +60,7 @@ public class DemoImage : NSObject {
         let label2Rect = CGRect(x: -5.23, y: -51, width: 147.06, height: 313)
         let label2Style = NSMutableParagraphStyle()
         label2Style.alignment = .left
-        let label2FontAttributes = [NSFontAttributeName: UIFont(name: "AvenirNext-DemiBold", size: 203)!, NSForegroundColorAttributeName: textForeground, NSParagraphStyleAttributeName: label2Style]
+        let label2FontAttributes = [NSAttributedStringKey.font: UIFont(name: "AvenirNext-DemiBold", size: 203)!, NSAttributedStringKey.foregroundColor: textForeground, NSAttributedStringKey.paragraphStyle: label2Style]
 
         "D".draw(in: label2Rect, withAttributes: label2FontAttributes)
 
@@ -69,7 +69,7 @@ public class DemoImage : NSObject {
         let labelRect = CGRect(x: 48.92, y: -50, width: 146.11, height: 313)
         let labelStyle = NSMutableParagraphStyle()
         labelStyle.alignment = .left
-        let labelFontAttributes = [NSFontAttributeName: UIFont(name: "AvenirNext-DemiBold", size: 203)!, NSForegroundColorAttributeName: textForeground, NSParagraphStyleAttributeName: labelStyle]
+        let labelFontAttributes = [NSAttributedStringKey.font: UIFont(name: "AvenirNext-DemiBold", size: 203)!, NSAttributedStringKey.foregroundColor: textForeground, NSAttributedStringKey.paragraphStyle: labelStyle]
 
         "G".draw(in: labelRect, withAttributes: labelFontAttributes)
         
@@ -79,7 +79,7 @@ public class DemoImage : NSObject {
 
     // Generated Images
 
-    public dynamic class var imageOfDemo: UIImage {
+    @objc public dynamic class var imageOfDemo: UIImage {
         if Cache.imageOfDemo != nil {
             return Cache.imageOfDemo!
         }
