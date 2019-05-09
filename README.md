@@ -1,3 +1,5 @@
+### ⚠️ No longer supported. If you're using it in your app, let me know and I'll bring it up to date.
+
 # DGNotifyView
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f815aa4a8c734a938260d6e56f88b455)](https://www.codacy.com/app/glowcap/DGNotifyView?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=glowcap/DGNotifyView&amp;utm_campaign=Badge_Grade)
