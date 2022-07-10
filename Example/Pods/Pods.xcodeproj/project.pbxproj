@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		061398678A53409964F7471A4084F127 /* Pods-DGNotifyView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A6DA74F2E45A91483957D8D0E323454 /* Pods-DGNotifyView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BAC1CC58297537DE1B6CBD7AB148657 /* Pods-DGNotifyView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DF802A65D0473208ECCEDD5073FAAA /* Pods-DGNotifyView_Example-dummy.m */; };
-		4AE6CBD0202AA4960058455C /* DGHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE6CBCF202AA4960058455C /* DGHelper.swift */; };
 		503AB1FD61BD18C556EED4BD8D65758A /* DGNotifyView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B44BAB66A0CDFEA67580424337076D84 /* DGNotifyView-dummy.m */; };
 		50EDFB9C925C6C5AAFBC92F709EB7602 /* DGNotifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6103EDEE26EB3987CB7B4FCDA1226 /* DGNotifyView.swift */; };
 		7C7A48754D67880565CB102B530CF7AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
@@ -39,7 +38,6 @@
 		1EF7A71001E179FFB278DE142B892B11 /* Pods-DGNotifyView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DGNotifyView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		2D5E71492982F71E42F6DE8EC0073196 /* Pods-DGNotifyView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DGNotifyView_Example.modulemap"; sourceTree = "<group>"; };
 		39D061D60B036777B725D5EF71477C41 /* Pods-DGNotifyView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DGNotifyView_Tests.modulemap"; sourceTree = "<group>"; };
-		4AE6CBCF202AA4960058455C /* DGHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DGHelper.swift; path = DGNotifyView/Classes/DGHelper.swift; sourceTree = "<group>"; };
 		4BC8CB65FE0CBB437F241E7608CA300C /* DGNotifyView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGNotifyView-prefix.pch"; sourceTree = "<group>"; };
 		4D9AC38FA00DDC8FD6EAC2993F5FC74B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		511C8BF0F6F11928885E664B483602D3 /* Pods-DGNotifyView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DGNotifyView_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				F2D6103EDEE26EB3987CB7B4FCDA1226 /* DGNotifyView.swift */,
-				4AE6CBCF202AA4960058455C /* DGHelper.swift */,
 				15B76C2E160DE2FFF28B06147A12BF70 /* Support Files */,
 			);
 			name = DGNotifyView;
@@ -316,6 +313,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -353,7 +351,6 @@
 			files = (
 				50EDFB9C925C6C5AAFBC92F709EB7602 /* DGNotifyView.swift in Sources */,
 				503AB1FD61BD18C556EED4BD8D65758A /* DGNotifyView-dummy.m in Sources */,
-				4AE6CBD0202AA4960058455C /* DGHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,8 +384,9 @@
 				GCC_PREFIX_HEADER = "Target Support Files/DGNotifyView/DGNotifyView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/DGNotifyView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 0.2.0;
 				MODULEMAP_FILE = "Target Support Files/DGNotifyView/DGNotifyView.modulemap";
 				PRODUCT_NAME = DGNotifyView;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -396,8 +394,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -419,7 +416,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-DGNotifyView_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-DGNotifyView_Example/Pods-DGNotifyView_Example.modulemap";
@@ -484,12 +481,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
@@ -509,7 +507,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-DGNotifyView_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-DGNotifyView_Example/Pods-DGNotifyView_Example.modulemap";
@@ -543,7 +541,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-DGNotifyView_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-DGNotifyView_Tests/Pods-DGNotifyView_Tests.modulemap";
@@ -579,8 +577,9 @@
 				GCC_PREFIX_HEADER = "Target Support Files/DGNotifyView/DGNotifyView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/DGNotifyView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 0.2.0;
 				MODULEMAP_FILE = "Target Support Files/DGNotifyView/DGNotifyView.modulemap";
 				PRODUCT_NAME = DGNotifyView;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -588,8 +587,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -646,13 +644,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
@@ -672,7 +671,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-DGNotifyView_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-DGNotifyView_Tests/Pods-DGNotifyView_Tests.modulemap";

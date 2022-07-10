@@ -1,6 +1,6 @@
 {
   "name": "DGNotifyView",
-  "version": "0.1.2.2",
+  "version": "0.2.0",
   "summary": "Animated view for internal app notifications",
   "description": "Animated view for in-app notifications. With this you can quickly generate a customisable UIView to notify the user.",
   "homepage": "https://github.com/glowcap/DGNotifyView",
@@ -13,11 +13,11 @@
   },
   "source": {
     "git": "https://github.com/glowcap/DGNotifyView.git",
-    "tag": "0.1.2.2"
+    "tag": "0.2.0"
   },
   "social_media_url": "https://twitter.com/daymeing",
   "platforms": {
-    "ios": "8.0"
+    "ios": "11.0"
   },
   "source_files": "DGNotifyView/Classes/**/*",
   "frameworks": "UIKit"

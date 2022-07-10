@@ -1,5 +1,5 @@
 PODS:
-  - DGNotifyView (0.1.2.2)
+  - DGNotifyView (0.2.0)
 
 DEPENDENCIES:
   - DGNotifyView (from `../`)
@@ -13,4 +13,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 108fd1daef54d43460b65ba5fef6fbb26a32a773
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.11.2
