@@ -47,7 +47,7 @@ final class ViewController: UIViewController {
   }
   
   let noteTitle = "Sample Notification"
-  let noteMessage = "This message can contain up to 3 lines of text. The label text are init parameters."
+  let noteMessage = "This message can contain up to 3 lines of text. The label text are init parameters. This text should truncate after it reaches the end of the third line. If not, it's set up incorrectly."
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -154,8 +154,7 @@ final class ViewController: UIViewController {
     case (1,2):
       direction = .bottomRight
     default:
-      print("you should be here")
-      direction = .top
+      fatalError("🚫 You shouldn't be here")
     }
   }
   
@@ -164,7 +163,7 @@ final class ViewController: UIViewController {
     sender.isEnabled = false
     createNotification()
     view.addSubview(notifyView)
-    notifyView.displayFor(seconds: displaySeconds!) { (finished) in
+    notifyView.display(from: direction, for: displaySeconds!) { (finished) in
       if finished {
         self.nilNotifyView()
         sender.isEnabled = true
